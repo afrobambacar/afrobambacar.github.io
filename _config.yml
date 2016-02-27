@@ -11,11 +11,12 @@ paginate: 20
 baseurl: /
 domain_name: 'http://afrobambacar.github.io'
 google_analytics: 'UA-51189334-1'
+
 disqus: false
 disqus_shortname: 'your-disqus-shortname'
 
 # Details for the RSS feed generator
-url:            'http://your-blog-url.example.com'
+url:            'http://afrobambacar.github.io'
 author:         'Jaecheol Lee'
 authorTwitter:  'afr5'
 
