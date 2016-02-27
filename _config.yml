@@ -1,6 +1,6 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: A
+description: Front end web music developer
+meta_description: "A, Front end web music developer"
 
 aboutPage: true
 
@@ -10,14 +10,14 @@ highlighter: rouge
 paginate: 20
 baseurl: /
 domain_name: 'http://afrobambacar.github.io'
-google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-51189334-1'
 disqus: false
 disqus_shortname: 'your-disqus-shortname'
 
 # Details for the RSS feed generator
 url:            'http://your-blog-url.example.com'
-author:         'Your Name'
-authorTwitter:  'YourTwitterUsername'
+author:         'Jaecheol Lee'
+authorTwitter:  'afr5'
 
 permalink:       /:year/:title/
 
