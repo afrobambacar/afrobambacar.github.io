@@ -18,7 +18,7 @@ disqus_shortname: 'your-disqus-shortname'
 # Details for the RSS feed generator
 url:            'http://afrobambacar.github.io'
 author:         'Jaecheol Lee'
-authorTwitter:  ''
+authorTwitter:  'afr5'
 
 permalink:       /:year/:title/
 
