@@ -1,6 +1,6 @@
 ---
 title:  "집에서 홀로그램 만들기"
-date:   2016-02-28
+date:   2016-02-28 10:18:00
 description: Thriller Comedy Horror
 ---
 
