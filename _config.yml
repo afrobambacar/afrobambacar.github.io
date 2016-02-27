@@ -4,7 +4,7 @@ meta_description: "A, Front end web music developer"
 
 aboutPage: true
 
-markdown: kramdown
+markdown: redcarpet
 highlighter: rouge
 
 paginate: 20
