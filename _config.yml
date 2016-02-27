@@ -5,7 +5,7 @@ meta_description: "A, Front end web music developer"
 aboutPage: false
 
 markdown: redcarpet
-highlighter: rouge
+highlighter: pygments
 
 paginate: 20
 baseurl: /
