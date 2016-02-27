@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "개발 단축 용어 풀이집"
+date:   2015-05-21
+---
+
+* href: Hypertext REFerence
+* src: source
+* cwd: current working directory
+* dist: distribution
+* dest: destination
+* bin: binary
+* stdin: standard input
+* stdout: standard output
+* ajax: asynchronous javascript and xml

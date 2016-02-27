@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "nodeJS 버전 관리 매니저 n"
+date:   2014-05-20
+---
+
+nodeJS의 업데이트 주기가 빨라서 새로운 버전을 사용하고 싶을 때마다 nodeJS version update를 구글링 하곤 했었다. 필요하면 만들어 버리는게 개발자들이라고 과거에 검색했을 때는 없었는데 nodeJS 버전을 관리할 수 있는 노드 버전 관리 매니저가 어느샌가 나와 있었다.
+
+[n](https://github.com/visionmedia/n) 이라는 놈인데 터미널에서 다음 명령어를 사용하여 설치할 수 있다.
+
+{% highlight bash %}
+sudo npm install -g n
+{% endhighlight %}
+
+노드는 버전별로 설치하고 관리할 수 있다.
+
+{% highlight bash %}
+$ n 0.8.14
+$ n 0.8.17
+$ n 0.9.6
+{% endhighlight %}
+
+최신버전, 안정판 등도 설치할 수 있다.
+
+{% highlight bash %}
+$ n latest
+$ n stable
+{% endhighlight %}
+
+버전을 관리하려면 터미널에 n 을 타이핑하면 된다.
+
+{% highlight bash %}
+$ n
+
+  0.8.14
+ο 0.8.17
+  0.9.6
+{% endhighlight %}
+
+보다 자세한 사용법은 [github](https://github.com/visionmedia/n)를 참고하면 된다. 
+

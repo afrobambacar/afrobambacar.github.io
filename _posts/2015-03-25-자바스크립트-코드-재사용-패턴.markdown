@@ -1,0 +1,160 @@
+---
+layout: post
+title:  "자바스크립트 코드 재사용 패턴"
+date:   2015-03-25
+---
+
+## #1. 클래스 방식의 상속 패턴 & 프로토타입 체인
+
+객체 생성시 부모의 프로토타입을 자식의 프로토타입에 할당하는 방식이다. 생성된 객체에 ```hasOwnProperty``` 검사시 ```false```가 출력된다. 프로퍼티는 본인의 것이 아니라 ```__proto__```에 링크되어 있기 때문이다.
+
+{% highlight bash %}
+// 생성자 함수 선언
+> var P = function (name) { this.name = name || 'adam'; };
+
+// P는 함수이므로 prototype이 있다.
+> P.prototype.say = function () { return this.name; };
+
+// new 생성자를 사용하면 객체가 생성된다.
+// 생성자 함수의 프로퍼티는 자신의 것으로 복사하고
+// prototype에 선언된 프로퍼티는 생성자의 것과 연결된다.
+> var p = new P();
+
+// 다른 생성자 함수 선언
+> var C = function () {};
+
+// 프로토타입에 p 객체를 할당한다. 
+// name은 본인의 것이었고, say는 체이닝되었다는 것을 기억하라.
+> var C.prototype = p;
+
+// c 객체는 아무런 프로퍼티가 없다. 생성자가 비어있기 때문이다.
+// c.hasOwnProperty('name'), c.hasOwnProperty('say') 모두 false다.
+> var c = new C();
+
+// 하지만 __proto__로 연결되어 있기 때문에 say() 함수를 쓸 수 있다. 
+> c.say()
+// adam
+{% endhighlight %}
+
+## #2. 생성자 함수 빌려쓰기
+
+다음 예제는 생성자 함수를 빌려서 객체에 ```hasOwnProperty```를 만드는 것을 설명한다. 이 짓을 하는 이유는 프로퍼티의 값 변경이 체이닝되어있는 인스턴스에 영향을 주지 않기 위해서이다. 프로토타입 체인으로 연결되었을 경우 프로퍼티 값이 변경되면 자신의 것이 아니라 체이닝된 인스턴스의 프로퍼티에 영향을 준다. 하지만 ```hasOwnProperty```일 경우 프로퍼티 값을 변경해도 연결된 인스턴스에 영향을 미치지 않는다. 
+
+{% highlight bash %}
+// 생성자 함수 선언
+> var A = function (name) { this.tags = ['js', 'css'] };
+
+// new는 a = {}라는 객체를 만든다.
+// 그리고 A();를 실행하면 A함수의 this는 a{}가 된다.
+// A(); 함수가 실행되면서 this.tags에 값을 할당하므로 
+// a = { tags: ['js', 'css']};가 완성된다.
+> var a = new A();
+
+// 이 부분은 맨 처음에 설명했으므로 생략
+> var B = function () {};
+> B.prototype = a;
+> var b = new B();
+
+// 생성자 함수에 A함수 실행하는 것이 들어있다.
+// 참조 객체는 this이다.
+> var C = function () { A.call(this); };
+
+// c {} 를 먼저 만든다.
+// 생성자 함수에서 A를 실행시키는데 C함수 내의 this는 c {}가 되었다.
+// c {} 안에 A(); 함수를 실행하는 것이 되기 때문에
+// c { tags: ['js', 'css']} 가 완성된다.
+> var c = new C();
+
+// 다음은 true다. 
+> c.hasOwnProperty('tags');
+
+// 체이닝된 b.tags에 값을 추가하면 a.tags 인스턴스에도 영향을 미친다.
+// b.prototype = a; 를 했기 때문이다.
+> b.tags.push('html');
+
+// c는 프로퍼티를 복사했으므로 자기것만 바꾼다.
+> c.tags.push('php');
+
+// 결과 
+> console.log(a.tags.join(', '));
+// js, css, html
+{% endhighlight %}
+
+## #3. 생성자 빌려쓰고 프로토타입 지정해주기
+
+다음의 예제는 새로 생성할 객체에 hasOwnProperty를 만들면서 체인을 연결하는 것이다. 생성자 함수에서 this로 선언되지 않은 것은 상속되지 않기 때문에 이짓을 한다. 
+
+{% highlight javascript %}
+// 부모 생성자 함수
+var Parent = function (name) {
+	this.name = name || 'adam';
+};
+
+// 부모의 프로토타입 함수
+Parent.prototype.say = function () {
+	return this.name;
+};
+
+// 상속받을 자식 생성자 함수
+var Child = function (a, b, c, d) {
+	
+	// 아래는 this.name을 생성할 객체의 hasOwnProperty로 만든다.
+	Parent.apply(this, arguments);
+};
+
+// 아래는 Parent.prototype.say 함수와 연결된다. 
+Child.prototype = new Parent();
+{% endhighlight %}
+
+## #4. 프로토타입 공유
+
+원칙적으로 재사용할 멤버는 생성자 함수의 this가 아니라 프로토타입에 추가되어야 한다. 프로토타입을 공유하는 패턴은 이런면에서 유용하다. 하지만 자식이나 손자가 프로토타입을 수정할 수 있게 된다.
+```a.prototype.say = function () {}``` 식으로 재정의 할 수 있기 때문이다. 이 다음에 볼 예제는 그것을 막아준다. ```a.__proto__```는 접근이 되지 않기 때문이다.
+
+{% highlight javascript %}
+var inherit = function (C, P) {
+	C.prototype = P.prototype;
+};
+{% endhighlight %}
+
+## #5. 임시 생성자
+
+프로토타입 체인을 거는데 프록시를 하나 만들어서 수정될 위험을 피하는 방법이다. 프로퍼티를 복사하지는 않는다. 위에서 말한대로 ```a.__proto__```에는 접근할 수 없기 때문이다.
+
+{% highlight javascript %}
+var inherit = function (C, P) {
+	// 임시 생성자 함수 정의
+	var F = function () {};
+
+	// 임시 생성자 함수의 프로토타입에 부모의 프로토타입을 공유하도록 한다.
+	F.prototype = P.prototype;
+
+	// 자식의 프로토타입에 임시 생성자 함수를 통한 객체를 할당하여 프로토타입 체인을 만든다.
+	C.prototype = new F();
+
+	// 부모의 프로토타입은 __super__ 프로퍼티를 통해 공유한다. 
+	// 이렇게 하면 부모 클래스에 대한 접근 경로를 가지게 된다.
+	C.__super__ = P.prototype;
+
+	// new Child()로 생성한 객체의 constructor가 모두 Parent가 된다.
+	// 따라서 생성자 함수를 다른 것으로 변경한다.
+	// 아래와 같이 하면 Child가 된다. 
+	C.prototype.constructor = C;
+};
+{% endhighlight %}
+
+클로저를 이용하여 임시 생성자 함수 다시 쓰기
+
+{% highlight javascript %}
+var inherit = (function () {
+	var F = function () {};
+	return function (C, P) {
+		F.prototype = P.prototype;
+		C.prototype = new F();
+		C.__super__ = P.prototype;
+		C.prototype.constructor = C;
+	}
+})();
+{% endhighlight %}
+
+프로퍼티 복사: 생성자 함수에 this로 정의된 것들은 객체생성시 복사되어 ```hasOwnProperty```다.

@@ -1,0 +1,109 @@
+---
+layout: post
+title:  "트위터 카드를 이용한 컨텐츠 프리뷰 만들기"
+date:   2013-11-04
+---
+
+트위터 카드는 트위터봇이 메타태그를 해석하여 만들어 내는 컨텐츠 프리뷰 같은 것이다. 트위터 카드 타입은 총 여덟가지가 있다.
+
+1. Summary Card : 기본 카드로 타이틀, 설명, 썸네일과 트위터 어카운트를 표시한다.
+2. Summary Card with Large Image : Summary Card와 비슷한데 사진이 좀 더 큰 타입이다. 
+3. Photo Card : 트윗 크기 만하게 사진이 보여지는 카드다.
+4. Gallery Card : 사진 컬렉션을 보여주는 타입니다.
+5. App Card : 애플리케이션의 프로필을 제공하는 카드이다.
+6. App Installs and Deep-Linking : 확장타입으로 앱 다운로드와 딥 링킹이 가능한 타입이다.
+7. Player Card : 비디오, 오디오, 미디어 플레이어 카드이다. 트위터에서 첨부된 youtube를 재생시켜봤다면 바로 그것이다.
+8. Product Card : 제품에 대한 상세 정보를 보여주는 카드 타입이다. 
+
+Player Card와 Product Card는 별도의 승인 절차가 있어야 한다고 나와있다. (왠지 페북 뮤직리슨이 떠오르는 대목이다...;;)
+테스트를 위해 우선 만만한 talk 블로그를 가지고 놀아봤다. 트위터 카드는 og:tag도 호환해서 읽어들이는데, talk 블로그의 경우 og:tag가 잘 박혀있어서 테스트 하는데 큰 어려움은 없었다. 
+
+### 첫번째로 해야할 일은 head에 메타태그를 붙여주는 것 
+
+{% highlight html %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@soribada">
+<meta name="twitter:creator" content="@soribada">
+/* 기타 og:tag 혹은 twitter에서 제시한 태그들을 붙여줘야 한다. */
+{% endhighlight %}
+
+### 두번째는 Card Validator에서 잘 작동하는 지 검사하는 일이다.
+
+메타태그 작업을 마쳤으면 [Card Validator](https://dev.twitter.com/docs/cards/validation/validator)에서 카드가 잘 보이는지 확인해볼 수 있다. 
+
+### 사이트 승인 절차
+
+다음은 사이트 승인 절차를 거친다. 신청폼에 사이트에 대한 간단한 정보 및 관리자 트위터, 이메일 계정을 입력하면 확인 메일이 날아온다. (뭐 며칠씩 걸릴줄 알았는데 신청하자마자 바로 activated 되었다고... 트위터 대인배 녀석들...;ㅅ; ) 
+
+위와 같은 절차로 승인을 받으면 트위터에 링크를 공유하면 Summary가 만들어 지게 되고 낱개의 트윗을 확장시키거나, 앱에서 터치하는 경우 Summary가 보여지게 된다. 일단은 요기까지 하고 나중에 기회가 되면 좀 더 만져봐야겠다. 
+
+참고. 
+
+[트위터 카드 개발자 문서](https://dev.twitter.com/docs/cards)
+[Validator](https://dev.twitter.com/docs/cards/validation/validator)
+
+아래는 Rdio의 메타태그 영역
+
+{% highlight html %}
+<meta property="twitter:site" content="@Rdio">
+<meta property="twitter:app:id:iphone" content="335060889">
+<meta property="twitter:app:id:ipad" content="335060889">
+<meta property="twitter:app:id:googleplay" content="com.rdio.android.ui">
+<meta property="fb:app_id" content="100322856680770">
+<meta property="og:site_name" content="Rdio">
+<meta property="twitter:card" content="player">
+<meta property="twitter:player" content="https://rd.io/e/QUwQ3SJTD2g/">
+<meta property="twitter:player:width" content="430">
+<meta property="twitter:player:height" content="250">
+<meta property="twitter:app:url:iphone" content="rdio://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/">
+<meta property="twitter:app:url:ipad" content="rdio://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/">
+<meta property="twitter:app:url:googleplay" content="rdio://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/">
+<meta property="og:url" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/">
+<meta property="og:title" content="Iconoclast">
+<meta property="og:description" content="♫ By Symphony x. Released June 21, 2011. (12 songs, 82 minutes)">
+<meta property="og:image" content="http://rdio-c.cdn3.rdio.com/album/9/2/d/00000000000c5d29/1/square-600.jpg">
+<meta property="og:video" content="https://rd.io/e/QUwQ3SJTD2g/">
+<meta property="og:video:width" content="500">
+<meta property="og:video:height" content="250">
+<meta property="og:video:type" content="application/x-shockwave-flash">
+<meta property="og:type" content="music.album">
+<meta property="og:audio" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/">
+<meta property="og:audio:type" content="audio/vnd.facebook.bridge">
+<meta property="music:release_date" content="2011-06-21">
+<meta property="music:musician" content="http://www.rdio.com/artist/Symphony_x/">
+<meta property="music:song" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/track/Iconoclast/">
+<meta property="music:song:track" content="1">
+<meta property="music:song" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/track/The_End_Of_Innocence/">
+<meta property="music:song:track" content="2">
+<meta property="music:song" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/track/Dehumanized/">
+<meta property="music:song:track" content="3">
+<meta property="music:song" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/track/Bastards_Of_The_Machine/">
+<meta property="music:song:track" content="4">
+<meta property="music:song" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/track/Heretic/">
+<meta property="music:song:track" content="5">
+<meta property="music:song" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/track/Children_Of_A_Faceless_God/">
+<meta property="music:song:track" content="6">
+<meta property="music:song" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/track/When_All_Is_Lost/">
+<meta property="music:song:track" content="7">
+<meta property="music:song" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/track/Electric_Messiah/">
+<meta property="music:song:track" content="8">
+<meta property="music:song" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/track/Prometheus_(I_Am_Alive)/">
+<meta property="music:song:track" content="9">
+<meta property="music:song" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/track/Light_Up_The_Night/">
+<meta property="music:song:track" content="10">
+<meta property="music:song" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/track/The_Lords_Of_Chaos/">
+<meta property="music:song:track" content="11">
+<meta property="music:song" content="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/track/Reign_In_Madness/">
+<meta property="music:song:track" content="12">
+<link rel="canonical" href="http://www.rdio.com/artist/Symphony_x/album/Iconoclast_1/">
+<meta name="msapplication-TileColor" content="#0068B8">
+<meta name="msapplication-TileImage" content="/media/images/2/win8_icon.png">
+<meta name="msapplication-TileColor" content="#0068B8">
+<meta name="msapplication-TileImage" content="/media/images/2/win8_icon.png">
+<meta name="msapplication-TileColor" content="#0068B8">
+<meta name="msapplication-TileImage" content="/media/images/2/win8_icon.png">
+<meta name="msapplication-TileColor" content="#0068B8">
+<meta name="msapplication-TileImage" content="/media/images/2/win8_icon.png">
+{% endhighlight %}
+
+

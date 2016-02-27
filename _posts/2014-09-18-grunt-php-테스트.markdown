@@ -1,0 +1,69 @@
+---
+layout: post 
+title:  "그런트로 php 프로젝트 띄우기, grunt-php"
+date:   2014-09-18
+---
+
+# 아파치, php 설정하기 귀찮다.
+
+로컬에서 코드이그나이터 앱을 띄울 일이 생겼는데 의외로 해줘야 할 일이 많다. 일단 아파치 설치부터 설정까지가 시간이 너무 오래 걸린다. 내가 사용하는 PC야 다 설정이 되어 있다고 해도 이 프로젝트를 똑같이 다른 PC에서 띄운다고 생각하니 골치가 아파온다. 
+
+# Grunt-php라는 놈이 있다.
+
+골치아픈 일은 잊고 ```yeoman```의 ```Gruntfile.js```을 뒤적거리던 중 ```grunt-contrib-connect``` 플러그인이 바로 로컬호스트의 특정 포트로 앱을 띄워준다는 걸 알았다. 혹시 ```grunt-contrib-conncet```와 ```php```를 함께 사용할 수 있는 방법이 있지 않을까 구글링을 시작했는데 ... 있다. 그것도 ```grunt-contrib-conncet```를 이용할 것도 없이 단일 모듈만 이용하면 된다. ```grunt-php```라는 놈이 있다.
+
+# 테스트해보자.
+
+우선 그런트의 기본 절차인 ```package.json``` 파일 만들기
+{% highlight javascript %}
+{
+	"name": "grunt-php",
+	"version": "0.0.1",
+	"description": "grunt-php test",
+	"main": "index.php",
+	"author": "afrobambacar",
+	"devDependencies": {}
+}
+{% endhighlight %}
+
+Grunt 플러그인들을 설치하자.
+{% highlight bash %}
+$ npm install grunt --save-dev
+$ npm install grunt-php --save-dev
+$ npm install load-grunt-tasks --save-dev
+{% endhighlight %}
+
+다음으로 ```index.php``` 하나 만들어 주자.
+{% highlight php %}
+<?php
+	phpInfo();
+?>
+{% endhighlight %}
+
+그런트 태스크들을 정의할 Gruntfile.js을 만들자.
+{% highlight javascript %}
+module.exports = function (grunt) {
+	require('load-grunt-tasks')(grunt);
+	grunt.initCofig({
+		php: {
+			dist: {
+				options: {
+					port: 5000,
+					keepalive: true,
+					open: true
+				}
+			}
+		}
+	});
+	grunt.resisterTask('default', ['php']);
+}; 
+{% endhighlight %}
+
+이제 그런트를 돌려보자.
+
+{% highlight bash %}
+$ grunt
+{% endhighlight %}
+
+브라우저 주소창에 ```127.0.0.1:5000```을 입력했을 때 ```phpInfo```가 보이면 성공이다.
+

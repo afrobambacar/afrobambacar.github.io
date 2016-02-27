@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "내가 관심을 가지는 것들"
+date:   2014-04-09
+---
+
+#### angularJS
+
+백본보다는 손이 덜 갈 것 같아서 선택했는데 사실 이놈이 원흉이다.
+
+#### [yeoman](http://yeoman.io/gettingstarted.html)
+
+프로젝트 seed를 찾다가 발견하게 되었다. 개발하고자 하는 것에 따라서 폴더 구조부터 의존 패키지 까지 모두 해결해주는 편리한 놈이다.
+
+#### bower
+
+CentOS에는 yum이 있고, NodeJS에는 npm이 있고, 프론트엔드에는 bower가 있다.
+
+#### grunt
+
+yeoman을 로컬에서 바로 실행해주는 놈인데 로그도 찍히고 좋다. 특히 아래 Jshint가 도움이 된다.
+
+#### Jshint
+
+자바스크립트를 검사해주는 녀석인데 너무 디테일한 설정은 피곤함을 부른다. 특히 들여쓰기를 검사해주는 indent와 들여쓰기를 탭으로 했는지, 스페이스바로 했는지를 검사해주는 smarttabs는 정말 피곤하다.
+
+#### atlassian
+
+JIRA, Confluence, Agile 등 요즘 support team에게 문의하는 일이 많다. 또한 github 대신에 개인 프로젝트에서 bitbucket을 사용하고 있는데 UI가 익숙해서인지 github 보다 뭔가 마음이 편안해진다. 
+
+#### AWS
+
+프리티어로 서비스를 사용한지 한 3개월 된 것 같다. 그동안 EC2, S3, Route 53를 사용해보았는데 처음엔 막막하더니 조금식 익숙해진다. 
+
+#### Jekyll
+
+오늘 테마를 바꿨으므로...;;
+

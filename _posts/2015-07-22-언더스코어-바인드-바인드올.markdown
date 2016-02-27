@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "언더스코어 바인드(bind), 바인드올(bindAll)"
+date:   2015-07-22
+---
+
+## _.bind(function, object, *arguments)
+
+언더스코어의 메서드 중 ```bind```는 함수에 객체를 연결할 때 사용한다.
+
+{% highlight js %}
+var func = function(greeting){ return greeting + ': ' + this.name };
+func = _.bind(func, {name: 'moe'}, 'hi');
+func();
+=> 'hi: moe'
+{% endhighlight %}
+
+위 예제처럼 함수에 ```this.name```이 정의되어 있는 경우 ```_.bind```의 두번째 인자로 객체를 넘기면 ```this.name```이 정상적으로 나오게 된다. 
+
+## _.bindAll(object, *methodNames)
+
+언더스코어의 메서드 중 ```bindAll```은 ```bind```와 비슷하게 함수에 원하는 객체를 연결해주는 역할을 한다.
+
+{% highlight js %}
+var buttonView = {
+  label  : 'underscore',
+  onClick: function(){ alert('clicked: ' + this.label); },
+  onHover: function(){ console.log('hovering: ' + this.label); }
+};
+_.bindAll(buttonView, 'onClick', 'onHover');
+// When the button is clicked, this.label will have the correct value.
+jQuery('#underscore_button').bind('click', buttonView.onClick);
+{% endhighlight %}
+
+위 예제에서 보면 제이쿼리로 클릭 이벤트를 바인드 했을 때 해당 함수의 this는 클릭 이벤트가 되지만, ```_.bindAll```을 사용해서 객체를 연결해주었기 때문에 두 함수는 ```label```을 참고하게 된다. 
+
