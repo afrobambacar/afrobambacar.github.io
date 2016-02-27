@@ -5,9 +5,11 @@ meta_description: "A, Front end web music developer"
 aboutPage: false
 
 markdown: redcarpet
-highlighter: pygments
+highlighter: rouge
 
+gems: [jekyll-paginate]
 paginate: 20
+
 baseurl: /
 domain_name: 'http://afrobambacar.github.io'
 google_analytics: 'UA-51189334-1'
