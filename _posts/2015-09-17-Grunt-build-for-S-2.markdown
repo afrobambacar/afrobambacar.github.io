@@ -2,6 +2,7 @@
 layout: post
 title:  "Grunt build for S 2.0"
 date:   2015-09-17
+description: 리퀘스트를 줄이기 위한 S 2.0의 빌드 방식
 ---
 
 # Overview

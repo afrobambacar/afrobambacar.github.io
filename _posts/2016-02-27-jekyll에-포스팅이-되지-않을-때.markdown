@@ -10,7 +10,7 @@ description: Jekyll의 timezone 옵션
 
 Jekyll의 Configuration 파일, 즉 _config.yml에 timezone을 추가해주면 된다. 만약 현재 위치가 한국이라면 [list of timezone][list of timezone]을 참고하여 다음과 같은 라인을 추가하면 된다.
 
-{% highlight %}
+{% highlight bash %}
 timezone: Asia/Seoul
 {% endhighlight %}
 

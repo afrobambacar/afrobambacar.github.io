@@ -2,6 +2,7 @@
 layout: post
 title:  "S.Component"
 date:   2015-09-17
+description: S.Component 객체가 하는 일
 ---
 
 # Overview

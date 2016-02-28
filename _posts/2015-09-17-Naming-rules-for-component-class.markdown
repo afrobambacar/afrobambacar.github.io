@@ -2,6 +2,7 @@
 layout: post
 title:  "Naming rules for component class"
 date:   2015-09-17
+description: S 2.0의 네이밍 룰
 ---
 
 # Overview
