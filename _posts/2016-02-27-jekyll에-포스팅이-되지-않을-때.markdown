@@ -1,7 +1,22 @@
 ---
-title: "Jekyll에 포스팅이 되지 않을 때"
+title: "Jekyll 블로그에 포스팅이 안된다면?"
 date: 2016-02-27
-description: 혹시 시차가 문제였던 건 아닐까?
+description: Jekyll의 timezone 옵션
 ---
 
-정말로?
+요 며칠사이 블로그에 글을 쓰는데 이상하게도 글이 올라가지 않는 증상이 있었다. Github Pages에서 Jekyll 3.0으로 업그레이드 하면서 발생했다고 생각하여 업그레이드도 해보고 원인을 찾기 위해서 로컬 빌드 및 서버도 띄워봤지만 해결책을 찾을 수 없었다. 정말 한참을 해맸다.
+
+어느날은 되고, 어느날은 안되고, 로컬 서버에선 글이 보이는데, Github Pages에 올리면 보이지 않고 ... 그렇게 3일을 해메고 나서야 문득 드는 생각이 타임존과 관련이 있는 것은 아닐까란 생각까지 도달하게 되었다. 해결방법? 물론 있다. [jeykll configuration doc][jeykll configuration doc]
+
+Jekyll의 Configuration 파일, 즉 _config.yml에 timezone을 추가해주면 된다. 만약 현재 위치가 한국이라면 [list of timezone][list of timezone]을 참고하여 다음과 같은 라인을 추가하면 된다.
+
+{% highlight %}
+timezone: Asia/Seoul
+{% endhighlight %}
+
+
+
+
+
+[jeykll configuration doc]: http://jekyllrb.com/docs/configuration/
+[list of timezone]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
