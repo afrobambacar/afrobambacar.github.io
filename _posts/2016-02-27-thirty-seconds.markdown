@@ -12,5 +12,5 @@ description: 30초 음악 공유 웹 애플리케이션
 
 사용한 라이브러리는 다음과 같다. 
 
-* 프론트엔드 backbone.js, howler.js (오디오 객체)
-* 백엔드 express.js, mongodb, spotify-web-api-node (api 모듈)
+* 프론트엔드 backbone.js, howler.js
+* 백엔드 express.js, mongodb, spotify-web-api-node
