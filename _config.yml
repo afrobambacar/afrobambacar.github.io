@@ -16,8 +16,8 @@ baseurl: /
 domain_name: 'http://afrobambacar.github.io'
 google_analytics: 'UA-51189334-1'
 
-disqus: false
-disqus_shortname: 'your-disqus-shortname'
+disqus: true
+disqus_shortname: 'afr5'
 
 # Details for the RSS feed generator
 url:            'http://afrobambacar.github.io'
