@@ -14,8 +14,7 @@ Jekyll의 Configuration 파일, 즉 _config.yml에 timezone을 추가해주면 �
 timezone: Asia/Seoul
 {% endhighlight %}
 
-
-
+아마도 미래시간에 대한 포스팅을 막기위한 방법인 것 같다.
 
 
 [jeykll configuration doc]: http://jekyllrb.com/docs/configuration/
