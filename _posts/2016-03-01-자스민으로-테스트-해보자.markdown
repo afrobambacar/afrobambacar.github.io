@@ -1,0 +1,48 @@
+---
+title: "BDD 테스트 툴, 자스민 시작하기"
+date: 2016-03-01
+description: 사실 테스트 코드를 작성하는 습관이 더 중요해보인다.
+---
+
+### 설치
+
+설치라고 해서 조금 이상하긴 하다. 마치 npm을 이용해서 무언가 글로벌로 설치해야 할 것 같지만 실상은 zip 파일을 다운로드 받아서 압축을 푸는 것이 전부다. [Jasmine release page][Jasmine release page]에 방문해서 원하는 버전의 zip 파일을 다운로드 받으면 된다. 
+
+### 실행방법
+
+zip 파일의 압축을 풀면 루트 디렉토리에 SpecRunner.html 파일이 있다. 이 파일을 브라우저를 이용해서 열어보면 테스트를 실행한 결과를 보여준다. 이 부분에 있어서는 Grunt, Karma 등과 연계하여 자동화 시킬 수 있지만 일단 맛보기로는 브라우저를 열어 테스트 코드를 실행하도록 되어 있다.
+
+### 용어
+
+다음의 용어들과 코드 블락의 형태에 익숙해지면 좋다. 
+
+* Suites: 테스트의 모음을 말한다. describe 함수로 모음을 만들 수 있다.
+* Specs: 테스트를 말한다. it 함수를 사용하며 테스트 케이스를 작성할 수 있다.
+* Expectation: 테스트 할 대상을 말한다. expect 함수를 사용한다.
+* Matchers: 비교 방법을 말한다. toBe, not.toBe 등이 해당한다.
+
+{% highlight javascript %}
+// Suite
+describe("A suite", function() {
+	
+  // Spec
+  it("contains spec with an expectation", function() {
+
+    // Expectation & Matches
+    expect(true).toBe(true);
+
+  });
+
+});
+{% endhighlight %}
+
+### 느낀점
+
+문서를 보면서 느낀 것은 자스민을 사용할 줄 안다는 것이 중요한 것은 아닌 듯 하다. 테스트 코드를 작성하는 습관과 BDD 개발 방법론에 대한 이해 및 습관이 없다면 사실상 무용지물로 보인다. 무엇을 테스트 할 것인지, 어떻게 코드를 시작할 것인지가 굉장히 중요해보인다. 사실 이 부분에 대한 글은 찾을 수가 없었다. BDD 개발 방법론을 사용하는 실제 프로젝트를 한번 경험해보면 좋을 것 같다. 
+
+
+
+[Jasmine release page]: https://github.com/jasmine/jasmine/releases
+[Jasmine Github Pages]: http://jasmine.github.io
+[Jasmine 2.4 documentation]: http://jasmine.github.io/2.4/introduction.html
+
