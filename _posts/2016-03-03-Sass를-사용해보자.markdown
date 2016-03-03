@@ -1,0 +1,163 @@
+---
+title: "Sass를 사용해보자"
+date: 2016-03-03
+description: CSS with superpowers
+---
+
+Sass는 처음에 한번 해보는게 귀찮아서 그렇지 막상 해보면 금방 적응되는 언어다. 게다가 몇 번 쓰다보면 일반적인 CSS를 작성하는 것보다 훨씬 유용하게 사용할 수 있다는 것을 금방 눈치챌 수 있다. Sass의 특징 중 가장 내세울 만한 것은 다음 네 가지로 압축된다. Variables, nesting, mixins, inheritance. 
+
+### Variables
+
+그동안 얼마나 많은 파일에 컬러값을 일일이 타이핑하며 시간을 낭비했는지 깨닫게 해주는 기능이다. 이렇게 작성된 css 파일들은 유지보수 할 때도 문제다. 컬러가 변경 되면 수 많은 css 파일들을 찾아다니며 일일이 수정을 해야 했다. 
+
+Sass의 Variables 기능은 이러한 문제를 해결한다. 컬러나, 폰트를 변수로 만들어 필요한 곳에 똑같이 적용할 수 있으며 변경도 쉬워진다. Sass에서 변수는 $ 문자를 이용하여 만든다.
+
+###### Sass
+
+```sass
+$font-stack:    Helvetica, sans-serif
+$primary-color: #333
+
+body
+  font: 100% $font-stack
+  color: $primary-color
+```
+
+###### Compiled
+
+```css
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+```
+
+### Nesting
+
+그동안 부모 클래스명을 일일이 타이핑하느라 고생이 많았다. 물론 이렇게 타이핑한 클래스명이 변경해야 할 위기에 처했을 때는 컬러를 변경하는 것 만큼이나 노가다를 해야했다. Sass의 중첩 구조는 이러한 문제를 해결해준다. 
+
+###### Sass
+
+```sass
+nav
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+  li
+    display: inline-block
+
+  a
+    display: block
+    padding: 6px 12px
+    text-decoration: none
+```
+
+###### Compiled
+
+```css
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+```
+### Mixins
+
+박스의 모서리를 둥글게 만들기 위해 필요한 프로퍼티는 무려 4가지나 된다. CSS3의 프로퍼티는 이렇게 해줘야 하는 경우가 많이 있다. 이런 경우 mixins를 이용하면 편하다. 심지어 값을 지정하여 생성할 수도 있다.
+
+###### Sass
+
+```sass
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+.box
+  +border-radius(10px)
+```
+
+###### Compiled
+
+```css
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+```
+
+### Extend / Inheritance
+
+마지막으로 @extend는 특정 클래스의 css 프로퍼티를 공유할 수 있게 해준다. css에서는 프로퍼티 기준으로 클래스를 나열해야 했지만 Sass에서는 보다 직관적으로 필요한 클래스를 그저 복사하기만 하면 된다.
+
+###### Sass
+
+```sass
+.message
+  border: 1px solid #ccc
+  padding: 10px
+  color: #333
+
+
+.success
+  @extend .message
+  border-color: green
+
+
+.error
+  @extend .message
+  border-color: red
+
+
+.warning
+  @extend .message
+  border-color: yellow
+```
+
+###### Compiled
+
+```css
+.message, .success, .error, .warning {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+```
+
+### 결론 
+
+업무를 하면서 많이 느꼈지만 그동안 css를 수정하는 것은 매우 소모적인 작업이었다. css를 수정하느니 템플릿을 새로 만들고 새로운 css를 만드는 쪽이 오히려 더 속이 편했던 적도 있다. Sass는 이런 부분에 있어서 매우 합리적인 방법들을 만들어 놓았다. 
+
+추가로 다음과 같은 사항들도 있다. SCSS와 다르게 중괄호와 세미콜론을 쓰지 않아도 되는 Sass의 문법은 기대 이상으로 매우 간편했다. Sass의 --watch 옵션은 바로바로 컴파일이 되도록하여 부담을 줄였다. 사용하지 않을 이유가 없는 것 같다. 
+
+[Sass 홈페이지][Sass 홈페이지]
+
+[Sass 홈페이지]: http://sass-lang.com
+

@@ -1,0 +1,20 @@
+---
+title: "HTML5 웹 오디오 비쥬얼라이저"
+date: 2016-03-08
+description: HTML5 web audio api & canvas
+---
+
+
+
+[w3c audio api]: https://www.w3.org/TR/webaudio/
+[w3c canvas api]: https://www.w3.org/TR/2dcontext/
+[w3schools canvas]: http://www.w3schools.com/tags/ref_canvas.asp
+[w3schools audio]: http://www.w3schools.com/tags/ref_av_dom.asp
+[Soundcloud visualizer]: http://www.michaelbromley.co.uk/experiments/soundcloud-vis/#snooplion/snoop-lion-ft-miley-cyrus
+[adive.in]: http://do.adive.in/music/
+[simple audio visualisation]: http://codepen.io/soulwire/pen/Dscga
+[wavesurfer.js]: http://wavesurfer-js.org/
+
+[thequietplaceproject]: http://thequietplaceproject.com/thequietplace
+[rainymood]: http://www.rainymood.com
+[calm]: http://www.calm.com/
