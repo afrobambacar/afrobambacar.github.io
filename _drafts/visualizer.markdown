@@ -1,6 +1,5 @@
 ---
 title: "HTML5 웹 오디오 비쥬얼라이저"
-date: 2016-03-30
 description: HTML5 web audio api & canvas
 ---
 
