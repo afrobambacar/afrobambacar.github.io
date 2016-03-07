@@ -1,6 +1,6 @@
 ---
 title: '눈에 보이지 않는 브라우저, PhantomJS'
-data: 2016-03-07
+data: 2016-03-06
 description: headless, head가 없는거 아니다.
 ---
 
