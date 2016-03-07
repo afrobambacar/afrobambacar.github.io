@@ -24,6 +24,8 @@ if (Modernizr.audio) {
 .audio .box { color: green; }
 ```
 
+어떠한 기능을 검사할 수 있는지는 [modernizr.js 다운로드 페이지][modernizr.js 다운로드 페이지]에서 자세히 확인할 수 있다.
+
 ### Polyfills
 
 폴리필은 폴리필러(polyfiller)라고도 하며 웹 브라우저에 없는 기능을 제공하기 위한 추가적인 코드를 말한다. 말하자면 [modernizr.js][modernizr.js]를 통해 지원되지 않는 기능이라고 확인되었을 때 동작시킬 대체 코드, 라이브러리 등을 얘기한다. 종종 shim, fallback 이라는 용어도 등장하는데 모두 비슷한 컨셉이다. 
