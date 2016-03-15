@@ -9,6 +9,7 @@ archive: true
         <h2 class="headline">{{ page.date | date:"%B %-d, %Y" }}</h2>
     </header>
     <section id="post-body">
+        <div class="ads">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- 블로그 광고 -->
         <ins class="adsbygoogle"
@@ -19,9 +20,11 @@ archive: true
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
+        </div>
 
         {{content}}
 
+        <div class="ads">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- 블로그 광고 -->
         <ins class="adsbygoogle"
@@ -32,6 +35,7 @@ archive: true
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
+        </div>
     </section>
 </article>
 <footer id="post-meta" class="clearfix">
