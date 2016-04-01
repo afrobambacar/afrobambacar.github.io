@@ -4,7 +4,7 @@ date: 2016-03-23
 description: 페이스북에서 친절하게도 예제를 올려주셨다.
 ---
 
-### UIExplorer
+### 리액트 네이티브의 UI 탐색기
 
 보통의 자바스크립트 개발자가 리액트 네이티브를 활용하고자 할 때 가장 귀찮은 점은 iOS의 네이티브 UI 컴포넌트, API 목록들을 알아야 한다는 점일 것 같다. 리액트 네이티브 문서에서 구지 설명하고 있진 않지만 사실 페이스북은 문서보다 더 친절한 예제를 이미 제공하고 있다. 다음의 Git repository에서 말이다. 
 
@@ -18,27 +18,27 @@ $ git clone https://github.com/facebook/react-native.git
 
 ### UI Components
 
-* <ActivityIndicatorIOS> : 로딩 표시
-* <DatePicker> : 날짜 선택 인풋
-* <Image> : 이미지 표시
-* <ListView> : 목록을 표시할 때 사용, 그리드 레이아웃, 페이징 예제가 담겨있다.
-* <MapView> : 맵을 표시할 때 사용
-* <Modal> : 레이어드 팝업 표시
-* <Navigator> : 화면 전환 애니메이션
-* <NavigatorIOS> : 상단 네비게이션 바의 커스터마이징 예제
-* <PickerIOS> : 커스텀 선택 인풋
-* <RefreshControl> : 스크롤뷰에서의 pull-to-refresh 효과
-* <ScrollView> : 스크롤뷰는 리스트뷰와 다르게 특정 영역을 스크롤 할 수 있다.
-* <SegmentedControlIOS> : 주로 탭, 서브 네비게이션 바로 사용되는 UI
-* <SliderIOS> : 볼륨바와 같은 슬라이더 UI
-* <StatusBar> : 상태바 변경 api, 네트워크 사용중, 컬러 변경 등
-* <Switch> : true 혹은 false를 선택할 수 있는 스위치
-* <TabBarIOS> : iOS에서 주로 사용하는 하단 탭 바
-* <Text> : 텍스트 표기
-* <TextInput> : 싱글 혹은 멀티라인 텍스트 인풋
-* <Touchable*> : 터치 이벤트의 처리 예제, 롱 프레스, 포스 터치 등을 구분해낸다.
-* <TransparentHitTestExample> : 효과를 잘 모르겠다.
-* <View> : 기본적인 블락요소
+* ActivityIndicatorIOS : 로딩 표시
+* DatePicker : 날짜 선택 인풋
+* Image : 이미지 표시
+* ListView : 목록을 표시할 때 사용, 그리드 레이아웃, 페이징 예제가 담겨있다.
+* MapView : 맵을 표시할 때 사용
+* Modal : 레이어드 팝업 표시
+* Navigator : 화면 전환 애니메이션
+* NavigatorIOS : 상단 네비게이션 바의 커스터마이징 예제
+* PickerIOS : 커스텀 선택 인풋
+* RefreshControl : 스크롤뷰에서의 pull-to-refresh 효과
+* ScrollView : 스크롤뷰는 리스트뷰와 다르게 특정 영역을 스크롤 할 수 있다.
+* SegmentedControlIOS : 주로 탭, 서브 네비게이션 바로 사용되는 UI
+* SliderIOS : 볼륨바와 같은 슬라이더 UI
+* StatusBar : 상태바 변경 api, 네트워크 사용중, 컬러 변경 등
+* Switch : true 혹은 false를 선택할 수 있는 스위치
+* TabBarIOS : iOS에서 주로 사용하는 하단 탭 바
+* Text : 텍스트 표기
+* TextInput : 싱글 혹은 멀티라인 텍스트 인풋
+* Touchable* : 터치 이벤트의 처리 예제, 롱 프레스, 포스 터치 등을 구분해낸다.
+* TransparentHitTestExample : 효과를 잘 모르겠다.
+* View : 기본적인 블락요소
 * ProgressViewIOS : 프로그레스바
 * Layout Events는 레이아웃 애니메이션 효과를 줄 때 사용한다. 
 
