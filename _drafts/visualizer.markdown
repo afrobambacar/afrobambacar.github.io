@@ -3,6 +3,10 @@ title: "HTML5 웹 오디오 비쥬얼라이저"
 description: HTML5 web audio api & canvas
 ---
 
+1. html5 audio api 사운드 로딩, 플레이, 정지
+2. requestAnimationFrame / clearAnimationFrame 
+3. canvas
+4. 그리고 애니메이션을 그리는 것에 대한 지식이 필요함.
 
 
 [w3c audio api]: https://www.w3.org/TR/webaudio/
