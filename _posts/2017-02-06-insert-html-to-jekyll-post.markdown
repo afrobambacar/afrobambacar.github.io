@@ -12,9 +12,9 @@ date: 2017-02-06
 
 블로그 프로젝트 루트에 ```_include``` 라고 폴더를 만든 후 그 안에 html 파일들을 생성하세요. 예를들어 ```mycomponent.html```을 만들었다고 하고 그것을 포스트에 삽입하고 싶다면 다음과 같이 쓰면 됩니다. 
 
-```
-{% include mycomponent.html %}
-```
+{% highlight javascript %}
+	{% include mycomponent.html %}
+{% endhighlight %}
 
 당연히 mycomponent.html 파일은 HTML/CSS/JS를 포함할 수 있어요.
 
