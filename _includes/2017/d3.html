@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>hello d3</title>
+	</head>
+	<body>
+		<p>hello d3</p>
+		<hr>
+		<svg width="720" height="120"></svg>
+		<script src="https://d3js.org/d3.v4.js"></script>
+		<script>
+			var svg = d3.select('svg');
+			
+			svg.selectAll('circle')
+				.data([32, 57, 112, 293])
+				.enter().append('circle')
+				.style('fill', 'steelblue')
+				.attr('cy', 60)
+				.attr('cx', function (d, i) {
+					return i * 100 + 30;
+				})
+				.attr('r', function (d) {
+					return Math.sqrt(d);
+				});
+
+			var circle = d3.selectAll('circle').data([32, 57]);
+
+			circle.exit().remove();
+		</script>
+	</body>
+</html>
