@@ -5,9 +5,7 @@ description: HTML5 web audio api & canvas
 
 1. html5 audio api 사운드 로딩, 플레이, 정지
 2. requestAnimationFrame / clearAnimationFrame 
-3. canvas
-4. 그리고 애니메이션을 그리는 것에 대한 지식이 필요함.
-
+3. canvas or svg and d3.js
 
 [w3c audio api]: https://www.w3.org/TR/webaudio/
 [w3c canvas api]: https://www.w3.org/TR/2dcontext/
