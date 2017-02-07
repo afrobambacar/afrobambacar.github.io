@@ -1,12 +1,8 @@
 ---
-title: Hello d3.js and svg
-description: d3.js와 svg를 이용해서 그래프를 그려보자
-date: 2017-02-06
+title: svg 엘리먼트들 요약
+description: 익숙하지 않은 새로운 태그들을 정리해둔다.
+date: 2017-02-07
 ---
-
-d3.js를 이용하여 svg를 다루는 첫 번째 테스트
-
-{% include 2017/d3.html %}
 
 ```
 <svg width="400" height="200">
@@ -24,5 +20,4 @@ d3.js를 이용하여 svg를 다루는 첫 번째 테스트
 * ```circle``` 원
 * ```line``` 라인
 
-
-
+[SVG Group Element and D3.js]: https://www.dashingd3js.com/svg-group-element-and-d3js
