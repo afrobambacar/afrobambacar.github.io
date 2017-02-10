@@ -9,13 +9,19 @@ d3.js를 이용하여 svg를 다루는 첫 번째 테스트
 {% include 2017/d3.html %}
 
 ```
-<svg width="400" height="200">
-	<g>
-		<rect></rect>
-		<circle></circle>
-		<line></line>
-	</g>
-</svg>
+var svg = d3.select('svg');
+	
+svg.selectAll('circle')
+	.data([32, 57, 112])
+	.enter().append('circle')
+	.style('fill', 'steelblue')
+	.attr('cy', 60)
+	.attr('cx', function (d, i) {
+		return i * 100 + 30;
+	})
+	.attr('r', function (d) {
+		return Math.sqrt(d);
+	});
 ```
 
 * ```svg``` svg 시작 태그
