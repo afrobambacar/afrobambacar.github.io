@@ -4,6 +4,8 @@ description: 오랜 궁금증에 대한 해답
 date: 2017-03-15
 ---
 
+# process.env
+
 Express.js의 config 파일에 다음과 같은 것이 있다.
 
 ```
@@ -21,13 +23,15 @@ process.env.NODE_ENV, 이 환경변수를 통해서 Express.js 앱을 ```develop
 $ NODE_ENV=prodcution forever start app/app.js
 ```
 
-이는 사실 매우 불편한 방법인데 환경변수를 일일이 타이핑하여 앱을 구동시키는 것이 그렇게 좋은 아이디어인 것 같지 않기 때문이었다. 결론적으로 말하면 아는게 힘이다. 사실 process.env의 비밀은 리눅스/유닉스 시스템에 기본적으로 설정되어 있는 환경변수 였던 것이다. 터미널에서 ```env``` 명령어를 타이핑해보면 현재 컴퓨터에 설정된 환경변수들이 주욱 나열되는 것을 볼 수 있다.
+# env 
+
+이는 사실 매우 불편한 방법인데 환경변수를 일일이 타이핑하여 앱을 구동시키는 것이 그렇게 좋은 아이디어인 것 같지 않기 때문이었다. 결론적으로 말하면 이러라고 만든 process.env가 아니다. 사실 process.env는 NodeJS 앱이 동작할 리눅스/유닉스 시스템의 환경변수를 이용하는 것이다. 터미널에서 ```env``` 명령어를 타이핑해보면 현재 컴퓨터에 설정된 환경변수들이 주욱 나열되는 것을 볼 수 있다.
 
 ```
 $ env
 ```
 
-환경변수의 생성은 다음과 같이 한다. 
+환경변수의 생성
 
 ```
 $ env NAME=VALUE
@@ -39,13 +43,15 @@ $ env NAME=VALUE
 $ env -u NAME
 ```
 
-즉 NodeJS에서 process.env는 서버의 환경변수를 뜻하며 서버의 환경변수가 미리 설정되어 있다면 위와 같이 타이핑하여 앱을 구동시키지 않아도 된다는 뜻이다. 만약 프로덕션 서버라면 NODE_ENV=production을 환경변수로 설정해 놓으면 앱을 구동시킬 때 일일이 환경변수를 타이핑 할 필요가 없다는 뜻이다. 
+즉 NodeJS에서 process.env는 서버의 환경변수를 뜻하며 서버의 환경변수가 미리 설정되어 있다면 위와 같이 타이핑하여 앱을 구동시키지 않아도 된다는 뜻이다. 만약 프로덕션 서버라면 미리 NODE_ENV=production 이라는 환경변수를 만들어 놓고 동작시키면 된다는 뜻이다.
 
 ```
 $ env NODE_EMV=production
 ```
 
-응용, AWS의 AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY도 환경변수로 설정해 놓고 사용하면 번거로움이 줄어든다.
+# 응용
+
+AWS의 AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY도 환경변수로 설정해 놓고 사용하면 번거로움이 줄어든다.
 
 ```
 $ env AWS_ACCESS_KEY_ID=....
