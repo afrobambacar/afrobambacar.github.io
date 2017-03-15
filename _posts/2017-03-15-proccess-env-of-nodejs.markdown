@@ -45,5 +45,21 @@ $ env -u NAME
 $ env NODE_EMV=production
 ```
 
-프론트엔드 개발자도 알아야 고생을 덜 한다.
+응용, AWS의 AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY도 환경변수로 설정해 놓고 사용하면 번거로움이 줄어든다.
+
+```
+$ env AWS_ACCESS_KEY_ID=....
+$ env AWS_SECRET_ACCESS_KEY=...
+```
+
+소스에서는 다음과 같이 활용할 수 있다. 
+
+```
+const AWS = {
+  'key':    process.env.AWS_ACCESS_KEY_ID,
+  'secret': process.env.AWS_SECRET_ACCESS_KEY,
+  'bucket': 'dev.example.com',
+  'region': 'eu-west-1'
+};
+```
 
