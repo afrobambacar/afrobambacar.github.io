@@ -1,6 +1,7 @@
 ---
 layout: post 
 title:  "재사용이 가능한 Backbone.js 컴포넌트 만들기"
+description: Mixin 패턴을 알아보자
 date:   2014-11-16
 ---
 
