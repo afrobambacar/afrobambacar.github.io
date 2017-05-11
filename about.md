@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: about/
-profile: false
+profile: true
 ---
 
 ### 2016년
