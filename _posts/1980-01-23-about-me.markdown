@@ -2,6 +2,7 @@
 title:  "About Me"
 date:   1980-01-23 10:18:00
 description: 나는요
+profile: true
 ---
 
 ### 2016년
