@@ -3,7 +3,7 @@ description: jclee.dev@gmail.com
 meta_description: "A, Front end web developer"
 timezone: Asia/Seoul
 
-aboutPage: true
+aboutPage: false
 
 # markdown: kramdown
 # highlighter: rouge
