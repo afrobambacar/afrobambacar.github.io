@@ -1,6 +1,6 @@
 ---
 title: NodeJS의 process.env란 무엇인가?
-description: 오랜 궁금증에 대한 해답
+description: 서버의 환경변수 설정
 date: 2017-03-15
 ---
 
