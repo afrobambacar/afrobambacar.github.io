@@ -21,7 +21,7 @@ description: Yeoman generator로 만든 S 프레임워크
 올린지 며칠 되지 않았는데 어떻게 알고 다운받았는지 혹은 npm 모듈 다운로드 수치 산정에 버그가 있는지 [npmjs.org][npm]에서 확인해보니 224번을 기록하고 있다. 아 이렇게 부끄러운 코드가 공개되면 안되는데 말이다.
 
 
-[yeoman](http://yeoman.io/)
-[generator](http://yeoman.io/generators/)
-[s](https://github.com/afrobambacar/generator-s-webapp)
-[npm](https://www.npmjs.com/package/generator-s-webapp)
+[yeoman]: http://yeoman.io/
+[generator]: http://yeoman.io/generators/
+[s]: https://github.com/afrobambacar/generator-s-webapp
+[npm]: https://www.npmjs.com/package/generator-s-webapp
