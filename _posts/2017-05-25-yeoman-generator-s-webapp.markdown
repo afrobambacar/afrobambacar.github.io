@@ -1,7 +1,7 @@
 ---
-title: Generator-s-webapp
+title: Yeoman Generator 사용기
 date: 2017-05-25
-description: Yeoman generator
+description: S 프레임워크를 Yeoman으로 다운받을 수 있다.
 ---
 
 # Yeoman 소개
