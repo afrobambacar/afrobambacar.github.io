@@ -11,7 +11,7 @@ description: 깃텁 문서를 이제 봤다.
 * Commit was made in a fork
 * Commit was made in a pull request that was merged and squashed
 
-나의 경우는 1번에 해당했다. 깃텁의 이메일과 로컬 깃 설정의 이메일이 서로 달랐던 것이다. 로컬 깃의 이메일 설정을 바꿔서 
+나의 경우는 1번에 해당했다. 깃텁의 이메일과 로컬 깃 설정의 이메일이 서로 달랐던 것. 주 메일을 변경하면서 깃텁의 메일을 변경했는데 로컬 깃의 이메일을 변경해주지 않았던 것이다. 로컬 깃의 이메일 설정을 바꿔서 
 
 ```
 $ git config --global user.email jclee.dev@gmail.com
