@@ -54,11 +54,11 @@
       var pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
       console.log('mdn loadtime sample: ', pageLoadTime);
 
-      function onLoad() { 
+      window.onLoad = function () { 
         var now = new Date().getTime();
         var page_load_time = now - performance.timing.navigationStart;
         console.log("mdn onload: " + page_load_time);
-      }
+      };
     }
 
   </script>
