@@ -47,9 +47,20 @@
 
     if (window.performance) {
       var timeSincePageLoad = Math.round(performance.now());
-      ga('send', 'timing', 'JS Dependencies', 'load', timeSincePageLoad);
-      console.log('timing: ', timeSincePageLoad);
+      // ga('send', 'timing', 'JS Dependencies', 'load', timeSincePageLoad);
+      console.log('ga timing sample: ', timeSincePageLoad);
+
+      var perfData = window.performance.timing; 
+      var pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+      console.log('mdn loadtime sample: ', pageLoadTime);
+
+      function onLoad() { 
+        var now = new Date().getTime();
+        var page_load_time = now - performance.timing.navigationStart;
+        console.log("mdn onload: " + page_load_time);
+      }
     }
+
   </script>
 </body>
 </html>
