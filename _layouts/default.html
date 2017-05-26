@@ -44,14 +44,12 @@
     ga('send', 'pageview');
 
     if (window.performance) {
-      var timeSincePageLoad = Math.round(performance.now());
-      // ga('send', 'timing', 'JS Dependencies', 'load', timeSincePageLoad);
-      console.log('ga timing sample: ', timeSincePageLoad);
-
-      window.onload = function(){
-        setTimeout(function(){
+      window.onload = function () {
+        setTimeout(function () {
           var t = performance.timing;
-          console.log(t.loadEventEnd - t.navigationStart);
+          var timeSincePageLoad = t.loadEventEnd - t.navigationStart;
+
+          ga('send', 'timing', 'JS Dependencies', 'load', timeSincePageLoad);
         }, 0);
       }
     }
