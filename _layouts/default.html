@@ -40,27 +40,21 @@
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    var perfData = window.performance.timing; 
-    var pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     ga('create', '{{ site.google_analytics }}', 'auto');
     ga('send', 'pageview');
-  </script>
-  <script>
+
     if (window.performance) {
       var timeSincePageLoad = Math.round(performance.now());
       // ga('send', 'timing', 'JS Dependencies', 'load', timeSincePageLoad);
       console.log('ga timing sample: ', timeSincePageLoad);
 
-      window.onLoad = function () { 
-        var now = new Date().getTime();
-        var page_load_time = now - window.performance.timing.navigationStart;
-        console.log("mdn onload: " + page_load_time);
-        
-        var perfData = window.performance.timing; 
-        var pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-        console.log('mdn loadtime sample: ', pageLoadTime);
-      };
-    }    
+      window.onload = function(){
+        setTimeout(function(){
+          var t = performance.timing;
+          console.log(t.loadEventEnd - t.navigationStart);
+        }, 0);
+      }
+    }
   </script>
 </body>
 </html>
