@@ -4,7 +4,7 @@ date:   2016-02-27
 description: 30초 음악 공유 웹 애플리케이션
 ---
 
-<img src="{{ site.url }}{{ site.baseurl }}assets/images/30seconds.png" />
+<img src="/assets/images/30seconds.png" />
 
 가끔 음악을 공유하고 싶을 때가 있다. 그걸 보는 다른 사람은 어떨지 모르지만 그냥 어딘가에 떠들고 싶은 그런 것? 트위터나 페이스북에서도 할 수 있지만 요즘 잘 쓰지 않는터라 나만을 위한 나만의 서비스에 잉여력을 발휘해보았다. 
 

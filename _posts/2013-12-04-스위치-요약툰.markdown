@@ -4,6 +4,6 @@ title:  "스위치 요약툰"
 date:   2013-12-05
 ---
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/img/tumblr_inline_mxapdvu7vt1qzc245.jpg" />
+<img src="/assets/img/tumblr_inline_mxapdvu7vt1qzc245.jpg" />
 
 기수에게 방향을 제시하고, 지도를 구체화하라.
