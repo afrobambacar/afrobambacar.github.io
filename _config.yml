@@ -11,20 +11,16 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-gems: [jekyll-github-metadata, jekyll-paginate, jekyll-gist]
+gems: [jekyll-paginate, jekyll-gist]
 paginate: 20
 baseurl: /
-domain_name: 'http://afrobambacar.github.io'
+domain_name: 'https://afrobambacar.github.io'
 google_analytics: 'UA-51189334-1'
-
-plugins:
-  - 'jekyll-github-metadata'
-
 disqus: true
 disqus_shortname: 'afr5'
 
 # Details for the RSS feed generator
-url:            'http://afrobambacar.github.io'
+url:            'https://afrobambacar.github.io'
 author:         'Jaecheol Lee'
 authorTwitter:  'afr5'
 

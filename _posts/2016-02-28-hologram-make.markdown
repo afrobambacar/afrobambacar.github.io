@@ -4,7 +4,7 @@ date:   2016-02-28
 description: 생각보다 간단하다.
 ---
 
-<img src="{{ site.baseurl }}assets/images/20160228.JPG" />
+<img src="{{ site.url }}{{ site.baseurl }}assets/images/20160228.JPG" />
 
 아이들에게 뭔가 재밌는 걸 보여주고 싶어서 만든 홀로그램 패널. 스카치테이프로 붙이기는 좀 성의 없어보여서 강력본드를 선택했는데 손재주가 없어서인지 여기저기 지저분한 자국이 많이 남게 되었다. 그냥 깔끔하게 스카치테이프를 쓰는게 나은 것 같다. 
 

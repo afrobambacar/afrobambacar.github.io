@@ -4,7 +4,7 @@ date: 2016-02-29
 description: 클릭 몇 번으로도 가능하다.
 ---
 
-<img src="{{ site.baseurl }}assets/images/20160229.png" />
+<img src="{{ site.url }}{{ site.baseurl }}assets/images/20160229.png" />
 
 ### Github Pages 서비스
 
