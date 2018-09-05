@@ -13,7 +13,7 @@ kramdown:
 
 gems: [jekyll-paginate, jekyll-gist]
 paginate: 20
-baseurl: /
+baseurl: '/'
 domain_name: 'https://afrobambacar.github.io'
 google_analytics: 'UA-51189334-1'
 disqus: true
