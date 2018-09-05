@@ -4,9 +4,17 @@ permalink: about/
 profile: true
 ---
 
+### 2018년
+
+* 새로운 아키텍쳐 위에 Web, iOS, Android 앱을 런칭했다.
+* 라스베가스에서 샌프란시스코까지
+* Serverless 그리고 Lambda
+
 ### 2017년
 
 * 미국에 서비스 할 두 번째 웹 애플리케이션을 만들었다.
+* 디유닛으로 이직, 서울스토어 다시 만들기
+* ES6, Docker 그리고 AWS
 
 ### 2016년
 
