@@ -4,9 +4,6 @@ date: 2018-10-01
 description: brew install hub
 ---
 
-[hub github page](https://hub.github.com/)
-[hub on github](https://github.com/github/hub)
-
 hub 설치
 ```
 $ brew install hub
@@ -30,3 +27,8 @@ $ git pull-request -b [OWNER:]BRANCH
 ```
 
 다음에 나오는 화면에서 첫번째 줄은 풀 리퀘스트의 제목, 나머지는 내용으로 채우면 된다.
+
+### ref
+
+* [hub github page](https://hub.github.com/)
+* [hub on github](https://github.com/github/hub)
