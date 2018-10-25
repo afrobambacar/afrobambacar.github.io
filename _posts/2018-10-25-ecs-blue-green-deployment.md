@@ -41,7 +41,7 @@ $ docker logs -f ecs-agent
 
 ### ECS Deployment Hangs Case #3
 
-미니멈, 맥스 값은 CPU 유닛을 고려해야만 한다. t2 micro의 경우 1 vCPU이며 CPU 한개의 유닛은 1,024다. 만약 컨테이너의 cpu 유닛을 256으로 지정했다면 t2 micro에 띄울 수 있는 최대 컨테이너 수는 4개가 된다. 이 중에 하나는 이미 `ecs-agent`가 차지하고 있으니 많아야 3개 정도 띄울 수 있다. 이것을 초과하게 되면 새로운 컨테이너가 뜨지 못하고 배포를 마무리 짓지 못하게 된다.
+미니멈, 맥스 값은 CPU 유닛을 고려해야만 한다. t2 micro의 경우 1 vCPU이며 CPU 한개의 유닛은 1,024다. 만약 컨테이너의 cpu 유닛을 하드리밋 256으로 지정했다면 t2 micro에 띄울 수 있는 최대 컨테이너 수는 4개가 된다. 이 중에 하나는 이미 `ecs-agent`가 차지하고 있으니 많아야 3개 정도 띄울 수 있다. 이것을 초과하게 되면 새로운 컨테이너가 뜨지 못하고 배포를 마무리 짓지 못하게 된다.
 
 [What does 'cpu' parameter mean in aws container service?](https://stackoverflow.com/questions/40657002/what-does-cpu-parameter-mean-in-aws-container-service)
 
