@@ -46,4 +46,12 @@ ecs-agent가 하는 일은 클러스터에 발생하는 이벤트를 수신하�
 
 클러스터 내부에 도커들은 31000 - 61000 포트 중 임의의 포트를 사용하여 컨테이너 포트와 매핑을 한다. 정확히 어떤 포트로 매핑되었는지는 타겟그룹을 보면 알 수 있다. 만약 EC2에서 사용하는 시큐리티 그룹에 위 포트가 허용이 되어있지 않다면 타겟 그룹의 헬스체크가 계속 실패하여 컨테이너를 죽였다 살렸다 할 것이므로 반드시 지정해주어야 한다.
 
+### ecs-agent logs, Github repo
 
+ECS-Optimized AMI에는 ecs-agent가 도커로 실행되어 있다. ecs-agent 어떻게 동작하고 있는지 당연히 로그도 볼 수 있다. 
+
+```bash
+$ docker logs -f ecs-agent
+```
+
+배포를 마무리 하지 못하는 이슈가 있어서 검색을 해보니 많은 사람들이 [aws/amazon-ecs-agent](https://github.com/aws/amazon-ecs-agent/issues) 리파지터리에 이슈를 등록하는 걸 찾을 수 있었다. 그리고 대응도 꽤 하는 것 같다.

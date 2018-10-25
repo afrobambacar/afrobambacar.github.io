@@ -2,15 +2,10 @@ name: afrobambacar
 description: Hello World
 meta_description: "A, Front end web developer"
 timezone: Asia/Seoul
-
 aboutPage: true
-
-# markdown: kramdown
-# highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-
 gems: [jekyll-paginate, jekyll-gist]
 paginate: 20
 baseurl: /
@@ -18,30 +13,29 @@ domain_name: 'https://afrobambacar.github.io'
 google_analytics: 'UA-51189334-1'
 disqus: true
 disqus_shortname: 'afr5'
-
+plugins:
+  - jekyll-sitemap
 # Details for the RSS feed generator
 url:            'https://afrobambacar.github.io'
 author:         'Jaecheol Lee'
 authorTwitter:  'afr5'
-
 permalink:       /:year/:month/:title.html
-
 defaults:
-    -
-        scope:
-            path: "" # empty string for all files
-            type: pages
-        values:
-            layout: default
-    -
-        scope:
-            path: "" # empty string for all files
-            type: posts
-        values:
-            layout: post
-    -
-        scope:
-            path: ""
-            type: drafts
-        values:
-            layout: post
+  -
+    scope:
+      path: "" # empty string for all files
+      type: pages
+    values:
+      layout: default
+  -
+    scope:
+      path: "" # empty string for all files
+      type: posts
+    values:
+      layout: post
+  -
+    scope:
+      path: ""
+      type: drafts
+    values:
+      layout: post
