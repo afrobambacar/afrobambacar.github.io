@@ -330,8 +330,8 @@ Qualifiers를 보면 `$LATEST` 값이 보이는데 이 값은 클라우드 프�
 
 여기까지가 클라우드 프론트 - 람다 엣지 - S3를 연결하는 길고 긴 과정이었습니다. 많은 튜토리얼들이 있지만 대부분 이정도는 알겠거니 하고 넘어가는 부분들이 사실 굉장히 높은 장벽처럼 느껴졌습니다. 이 문서도 보는 사람에게 안내하기 위한 안내서라기 보다는 까먹지 않으려고 기록하는 면이 더 크게 작용했다고 볼 수 있습니다. 그래도 처음에 이 작업을 할 때는 왜 이렇게 동작하는지 이해가 되지 않는 부분들이 많았는데 다시 작성하고 보니 윤곽이 보이네요.
 
-## ref.
+## ref
 
-* [Resizing Images with Amazon CloudFront & Lambda@Edge | AWS CDN Blog](https://aws.amazon.com/blogs/networking-and-content-delivery/resizing-images-with-amazon-cloudfront-lambdaedge-aws-cdn-blog/)
+* [Resizing Images with Amazon CloudFront & Lambda@Edge - AWS CDN Blog](https://aws.amazon.com/blogs/networking-and-content-delivery/resizing-images-with-amazon-cloudfront-lambdaedge-aws-cdn-blog/)
 * [Lambda 한개로 만드는 On-demand Image Resizing](https://engineering.huiseoul.com/lambda-%ED%95%9C%EA%B0%9C%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94-on-demand-image-resizing-d48167cc1c31)
 
