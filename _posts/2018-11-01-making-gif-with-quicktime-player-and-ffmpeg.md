@@ -28,5 +28,5 @@ $ ffmpeg -i Untitled.mov -pix_fmt rgb8 -r 25 -filter:v "setpts=0.25*PTS" -f gif 
 
 ![web](https://user-images.githubusercontent.com/1336102/47803381-ae4d1700-dd75-11e8-8511-d65d5a2173c6.gif)
 
-![iOS](https://user-images.githubusercontent.com/1336102/49519619-bd7b3380-f8e4-11e8-92d5-4ddc182a3f2c.gif)
+<img src="https://user-images.githubusercontent.com/1336102/49519619-bd7b3380-f8e4-11e8-92d5-4ddc182a3f2c.gif" alt="drawing" width="250"/>
 
