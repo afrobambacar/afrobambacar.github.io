@@ -21,3 +21,12 @@ $ ffmpeg -i Untitled.mov -pix_fmt rgb8 -r 25 -filter:v "setpts=0.25*PTS" -f gif 
 * -r: 프레임을 설정할 수 있다.
 * -filter: v라는 스트림에 setpts 필터를 걸겠다는 것이다. 이때 setpts는 영상의 재생스피드를 변경하는 값을 적었다.
 * -f: 포맷을 gif로 하겠다는 것이다.
+
+### GIF 만들기
+
+맥 유저라면 quickTime Player를 통해 화면을 녹화할 수 있다. File 메뉴에서 New Screen Recording 메뉴를 찾을 수 있는데 이것은 화면을 동영상으로 녹화하는 기능이다. 이 기능을 이용하여 mov 파일을 만들 수 있다. 이렇게 녹화한 파일을 ffmpeg의 위 명령어를 통해 변환을 할 수 있다. 
+
+![web](https://user-images.githubusercontent.com/1336102/47803381-ae4d1700-dd75-11e8-8511-d65d5a2173c6.gif)
+
+![iOS](https://user-images.githubusercontent.com/1336102/49519619-bd7b3380-f8e4-11e8-92d5-4ddc182a3f2c.gif)
+
