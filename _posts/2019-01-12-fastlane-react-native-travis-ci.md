@@ -1,10 +1,12 @@
 ---
 title: "[번역] 리액트 네이티브 앱을 패스트래인과 트래비스CI를 사용하여 배포하기"
 date: 2019-01-12
-description: hello world
+description: 
 ---
 
-약 일년 전에 Fastlane을 이용하여 리액트 네이티브 앱의 배포 프로세스를 설명한 [블로그 포스트](https://carloscuesta.me/blog/shipping-react-native-apps-with-fastlane/)를 쓴 적이 있습니다 [번역](https://afrobambacar.github.io/2019/01/fastlane-으로-리액트-네이티브-앱-배포하기.html). 그 블로그 포스트에서는 앱을 배포하기 위해 로컬 머신에서 자동화 하는 방법에 대해 적었습니다. 오늘은 이것을 더 발전시켜 Travic CI를 이용하여 더 편리하게 배포하는 방법에 대해서 알아보려고 합니다. 
+원문: [Shipping React Native apps with Fastlane and Travis](https://carloscuesta.me/blog/shipping-react-native-fastlane-travis/)
+
+약 일년 전에 Fastlane을 이용하여 리액트 네이티브 앱의 배포 프로세스를 설명한 [블로그 포스트](https://carloscuesta.me/blog/shipping-react-native-apps-with-fastlane/)를 쓴 적이 있습니다. 그 블로그 포스트에서는 앱을 배포하기 위해 로컬 머신에서 자동화 하는 방법에 대해 적었습니다. 오늘은 이것을 더 발전시켜 Travic CI를 이용하여 더 편리하게 배포하는 방법에 대해서 알아보려고 합니다. 
 
 ## 과정
 
