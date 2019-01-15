@@ -1,7 +1,7 @@
 ---
 title: "[번역] 리액트 네이티브 앱을 패스트래인과 트래비스CI를 사용하여 배포하기"
 date: 2019-01-12
-description: 
+description: Fastlane과의 혈투
 ---
 
 원문: [Shipping React Native apps with Fastlane and Travis](https://carloscuesta.me/blog/shipping-react-native-fastlane-travis/)
