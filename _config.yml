@@ -6,7 +6,7 @@ aboutPage: true
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-gems: [jekyll-paginate, jekyll-gist]
+gems: [jekyll-sitemap, jekyll-crosspost-to-medium]
 paginate: 20
 baseurl: /
 domain_name: 'https://afrobambacar.github.io'
@@ -15,6 +15,7 @@ disqus: true
 disqus_shortname: 'afr5'
 plugins:
   - jekyll-sitemap
+  - jekyll-crosspost-to-medium
 # Details for the RSS feed generator
 url:            'https://afrobambacar.github.io'
 author:         'Jaecheol Lee'
