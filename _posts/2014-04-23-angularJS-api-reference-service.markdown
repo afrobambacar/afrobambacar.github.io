@@ -89,10 +89,6 @@ angular.module('exceptionOverride', []).factory('$exceptionHandler', function ()
 
 사용자에게 보여질 데이터를 재구성하는데 사용됨
 
-{% highlight html %}
-{{ expression [| filter_name[:parameter_value] ... ] }}
-{% endhighlight %}
-
 # $http
 
 XMLHttpRequest 혹은 JSONP 같은 것으로 리모트 서버와 통신할 때 사용 (jquery.ajax라고 보면 됨) 
