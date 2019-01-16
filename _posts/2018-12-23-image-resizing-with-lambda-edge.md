@@ -127,7 +127,7 @@ Forward all, cache base on all을 선택해도 됩니다. 다만 이것을 선�
 
 EdgeLambdaRole IAM 롤은 준비가 되었습니다. 다만 S3에서 한가지를 더 설정해줘야 합니다. 람다가 S3에 접근할 권한을 가졌다고 하더라도 S3 버킷에 해당 정책이 들어있지 않으면 권한이 없다는 메시지를 출력합니다. EdgeLambdaRole이 S3 버킷에서 잘 동작할 수 있도록 S3 버킷의 정책에 다음 처럼 편집해줘야 합니다. 클라우드 프론트의 설정을 잘 하셨다면 Statement의 첫번째 정책은 이미 들어가 있을 것 입니다. 우리는 두 번째 Statement를 추가해주면 됩니다.
 
-```json
+```
 {
   "Version": "2008-10-17",
   "Id": "PolicyForCloudFrontPrivateContent",
@@ -136,7 +136,7 @@ EdgeLambdaRole IAM 롤은 준비가 되었습니다. 다만 S3에서 한가지�
       "Sid": "1",
       "Effect": "Allow",
       "Principal": {
-        "AWS": "CLOUDDFRONT_ARN"
+        "AWS": "CLOUDFRONT_ARN"
       },
       "Action": "s3:GetObject",
       "Resource": "arn:aws:s3:::BUCKET_NAME/*"
@@ -145,7 +145,7 @@ EdgeLambdaRole IAM 롤은 준비가 되었습니다. 다만 S3에서 한가지�
       "Sid": "2",
       "Effect": "Allow",
       "Principal": {
-          "AWS": "EdgeLambdaRole_ARN"
+        "AWS": "EdgeLambdaRole_ARN"
       },
       "Action": "s3:GetObject",
       "Resource": "arn:aws:s3:::BUCKET_NAME/*"
