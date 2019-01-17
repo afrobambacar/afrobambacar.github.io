@@ -180,7 +180,7 @@ end
 * LANG: Fastlane은 UTF-8에서 정상적으로 동작합니다. CI 툴에서 이 값이 ASCII로 설정되어 있는 경우가 있어서 다음과 같은 값을 입력해주어야 합니다. `en_US.UTF-8`
 * LC_ALL: `en_US.UTF-8`
 * MATCH_PASSWORD: _match_ 를 통해 생성한 인증서의 `passphrase` 
-* MATCH_KEYCHAIN_NAME: 키체인 이름
+* MATCH_KEYCHAIN_NAME: 키체인 이름 _eg. ios-build.keychain_
 * MATCH_KEYCHAIN_PASSWORD: 키체인 패스워드
 * MATCH_GIT_URL: `certificates`가 있는 프라이빗 깃헙 저장소 주소입니다. _eg. https://github.com/example/certificates.git_
 
@@ -225,6 +225,7 @@ Travis CI를 동작시킨 후에 앱스토어 커넥트에 _Missing Compliance_ 
 
 ### Ref.
 
+* [Travis-CI Fastlane Integration](https://docs.travis-ci.com/user/common-build-problems/#fastlane)
 * [Fastland Docs Continuous Integration](https://docs.fastlane.tools/best-practices/continuous-integration/)
 * [iOS Continuous Deployment with Fastlane](https://medium.com/coletiv-stories/ios-continuous-deployment-with-fastlane-36892ab66cb0)
 
