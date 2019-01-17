@@ -13,6 +13,7 @@ google_analytics: 'UA-51189334-1'
 disqus: true
 disqus_shortname: 'afr5'
 plugins:
+  - jekyll-gist
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-crosspost-to-medium

@@ -11,6 +11,8 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
     ffi (1.10.0)
     forwardable-extended (2.6.0)
     http (2.2.2)
@@ -41,6 +43,8 @@ GEM
       http (~> 2.0)
       jekyll (>= 2.0, < 4.0)
       json (~> 2.0)
+    jekyll-gist (1.5.0)
+      octokit (~> 4.2)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
@@ -56,6 +60,9 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     mercenary (0.3.6)
+    multipart-post (2.0.0)
+    octokit (4.13.0)
+      sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.3)
@@ -70,6 +77,9 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    sawyer (0.8.1)
+      addressable (>= 2.3.5, < 2.6)
+      faraday (~> 0.8, < 1.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
@@ -79,6 +89,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll-crosspost-to-medium
+  jekyll-gist
   jekyll-paginate
   jekyll-sitemap
 
