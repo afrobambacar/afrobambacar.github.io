@@ -224,6 +224,6 @@ Travis CI를 동작시킨 후에 앱스토어 커넥트에 _Missing Compliance_ 
 
 ### Ref.
 
-[Fastland Docs Continuous Integration](https://docs.fastlane.tools/best-practices/continuous-integration/)
-[iOS Continuous Deployment with Fastlane](https://medium.com/coletiv-stories/ios-continuous-deployment-with-fastlane-36892ab66cb0)
+* [Fastland Docs Continuous Integration](https://docs.fastlane.tools/best-practices/continuous-integration/)
+* [iOS Continuous Deployment with Fastlane](https://medium.com/coletiv-stories/ios-continuous-deployment-with-fastlane-36892ab66cb0)
 

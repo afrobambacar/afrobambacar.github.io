@@ -151,8 +151,8 @@ fastlane match appstore --readonly --keychain_password [YOUR LOCAL MACHINE PASSW
 
 ### Ref.
 
-[fastlane을 적용하여 팀원간 인증서 동기화 하기](https://littleshark.tistory.com/35?category=678123)
-[iOS Continuous Deployment with Fastlane](https://medium.com/coletiv-stories/ios-continuous-deployment-with-fastlane-36892ab66cb0)
-[[번역] Fastlane으로 리액트 네이티브 앱 배포하기](https://afrobambacar.github.io/2019/01/fastlane-%EC%9C%BC%EB%A1%9C-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%95%B1-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0.html)
-[[번역] 리액트 네이티브 앱을 패스트래인과 트래비스CI를 사용하여 배포하기](https://afrobambacar.github.io/2019/01/fastlane-react-native-travis-ci.html)
+* [fastlane을 적용하여 팀원간 인증서 동기화 하기](https://littleshark.tistory.com/35?category=678123)
+* [iOS Continuous Deployment with Fastlane](https://medium.com/coletiv-stories/ios-continuous-deployment-with-fastlane-36892ab66cb0)
+* [[번역] Fastlane으로 리액트 네이티브 앱 배포하기](https://afrobambacar.github.io/2019/01/fastlane-%EC%9C%BC%EB%A1%9C-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%95%B1-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0.html)
+* [[번역] 리액트 네이티브 앱을 패스트래인과 트래비스CI를 사용하여 배포하기](https://afrobambacar.github.io/2019/01/fastlane-react-native-travis-ci.html)
 

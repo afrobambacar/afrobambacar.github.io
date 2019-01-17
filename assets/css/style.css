@@ -188,8 +188,7 @@ li	{ list-style-type:circle; list-style-position:inside; }
 
 /* Line Height */
 #post-body, p { 
-	line-height:1.7; 
-	font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+	line-height:1.7;
 }
 
 b, strong { font-weight: 500;
