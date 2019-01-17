@@ -4,14 +4,18 @@ date: 2019-01-15
 description: Fastlane과의 혈투 1편
 ---
 
-이 글은 React Native 프로젝트의 iOS 빌드 및 Test Flight에 업로드하는 것을 자동화 할 수 없을까?에 대한 궁금증에서 출발했습니다. 여기서 말하는 자동화의 범위는 `git push origin master` 이후의 모든 태스크는 기계가 알아서 하도록 만드는 것을 말합니다. 미리 고백하지만 자바스크립트 생태계에서 살아가는 개발자가 네이티브 앱 개발에 익숙해지는 것은 정말 어려운 일인 것 같습니다. 복병은 의외의 곳에 숨어있었네요.
+이 글은 React Native 프로젝트의 iOS 빌드 및 Test Flight에 업로드하는 것을 자동화 할 수 없을까?에 대한 궁금증에서 출발했습니다. 여기서 말하는 자동화의 범위는 `git push origin master` 이후의 모든 태스크는 기계가 알아서 하도록 만드는 것을 말합니다. 
 
-## 개요
+* [Fastlane, Travis-CI로 React Native 프로젝트 배포 자동화 만들기 1편](https://afrobambacar.github.io/2019/01/react-native-ci-cd-with-travis-ci-and-fastlane.html)
+* [Fastlane, Travis-CI로 React Native 프로젝트 배포 자동화 만들기 2편](https://afrobambacar.github.io/2019/01/react-native-ci-cd-with-travis-ci-and-fastlane-2.html)
+
+## 문제들
 
 `git push origin master` 만으로 테스트 플라이트 업로드까지 자동화 하고자 하는 소소한 목표를 달성하기 위해 넘어야 할 산들을 간략하게 소개합니다. 
 
-* Xcode의 Signing을 수동으로 변경하는 과정
-* Travis CI에서 fastlane을 동작시키는 과정
+* CI 툴에서 빌드하기 위해서는 Xcode의 Signing 이슈를 해결해야 합니다. 자동으로 설정하셨던 분들은 특정 인증서를 사용하도록 수정해야 합니다.
+* Code Signing 에서의 문제는 인증서를 어떻게 관리할 것이냐 입니다. 이를 해결하기 위한 툴로 _Fastlane_ 이 있는데, 러닝커브에 대한 고통은 여러분의 몫입니다.
+* _Fastlane_ 은 인증서 뿐만 아니라 테스트 플라이트에 업로드도 함께 할 수 있도록 여러가지 도구를 지원합니다. 이와 친해지신다면 CI에서 배포까지 하는 것도 문제가 없습니다.
 
 ## Code Signing
 
@@ -142,7 +146,7 @@ fastlane match appstore --readonly --keychain_password [YOUR LOCAL MACHINE PASSW
 
 다음은 _Fastlane_ 을 이용하여 CI 툴에서 빌드하고 테스트 플라이트에 업로드 하는 방법에 대해서 포스팅하겠습니다. 
 
-[Fastlane, Travis-CI로 React Native 프로젝트 배포 자동화 만들기 2편]()
+[Fastlane, Travis-CI로 React Native 프로젝트 배포 자동화 만들기 2편](https://afrobambacar.github.io/2019/01/react-native-ci-cd-with-travis-ci-and-fastlane-2.html)
 
 
 ### Ref.

@@ -6,8 +6,8 @@ description: Fastlane과의 혈투 2편
 
 이 글은 React Native 프로젝트의 iOS 빌드 및 Test Flight에 업로드하는 것을 자동화 할 수 없을까?에 대한 궁금증에서 출발했습니다. 여기서 말하는 자동화의 범위는 `git push origin master` 이후의 모든 태스크는 기계가 알아서 하도록 만드는 것을 말합니다. 
 
-* Fastlane, Travis-CI로 React Native 프로젝트 배포 자동화 만들기 1편
-* Fastlane, Travis-CI로 React Native 프로젝트 배포 자동화 만들기 2편
+* [Fastlane, Travis-CI로 React Native 프로젝트 배포 자동화 만들기 1편](https://afrobambacar.github.io/2019/01/react-native-ci-cd-with-travis-ci-and-fastlane.html)
+* [Fastlane, Travis-CI로 React Native 프로젝트 배포 자동화 만들기 2편](https://afrobambacar.github.io/2019/01/react-native-ci-cd-with-travis-ci-and-fastlane-2.html)
 
 ### 이번에 할일
 
@@ -17,7 +17,7 @@ description: Fastlane과의 혈투 2편
 * Travis CI에 환경변수 설정 
 * .travis.yml 작성
 
-바로 [전편]()에서 이야기 했던 _Fastlane_ 의 역할 중에서 _Beta Deployment_ 기능을 기억하시나요? _Fastlane_ 을 프로젝트에 설정해두면 Xcode를 사용하지 않더라도 터미널에서 테스트 플라이트로 업로드 하는 일이 가능합니다. 개인의 맥에서 이것이 가능하다면 CI 툴이라고 안될 일은 없겠죠? 이 일을 하기 위해서는 프로젝트에 먼저 _Fastlane_ 을 설정해야 합니다. 
+바로 [전편](https://afrobambacar.github.io/2019/01/react-native-ci-cd-with-travis-ci-and-fastlane.html)에서 이야기 했던 _Fastlane_ 의 역할 중에서 _Beta Deployment_ 기능을 기억하시나요? _Fastlane_ 을 프로젝트에 설정해두면 Xcode를 사용하지 않더라도 터미널에서 테스트 플라이트로 업로드 하는 일이 가능합니다. 개인의 맥에서 이것이 가능하다면 CI 툴이라고 안될 일은 없겠죠? 이 일을 하기 위해서는 프로젝트에 먼저 _Fastlane_ 을 설정해야 합니다. 
 
 ### 프로젝트에 Fastlane 설정
 
@@ -183,7 +183,7 @@ end
 * MATCH_KEYCHAIN_PASSWORD: 키체인 패스워드
 * MATCH_GIT_URL: `certificates`가 있는 프라이빗 깃헙 저장소 주소입니다. _eg. https://github.com/example/certificates.git_
 
-이 환경변수들은 _.travis.yml_ 을 실행할 때 사용하기도 하고 _Fastlane_ 파일을 실행할 때 사용하기도 합니다. Travis CI 작업정의 파일인 _.travis.yml_ 은 다음과 같이 작성할 수 있습니다.
+이 환경변수들은 _.travis.yml_ 을 실행할 때 사용하기도 하고 앞서 정의한 _Fastlane_ 파일을 실행할 때 사용하기도 합니다. Travis CI 작업정의 파일인 _.travis.yml_ 은 다음과 같이 작성할 수 있습니다.
 
 ```
 cache:
