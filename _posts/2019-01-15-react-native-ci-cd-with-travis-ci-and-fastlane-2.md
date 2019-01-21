@@ -97,7 +97,7 @@ export MATCH_PASSWORD="YOUR_CERTIFICATES_PASSPHRASE"
 이제 이 스크립트는 다음과 같은 CLI 명령어를 통해 실행할 수 있습니다. 
 
 ```
-fastlane manual_testflight
+fastlane ios manual_testflight
 ```
 
 ### 자동으로 테스트 플라이트에 업로드하는 스크립트
