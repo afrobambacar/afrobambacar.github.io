@@ -32,15 +32,15 @@ description: 무엇을 선택할 것인가? 그것이 문제로다.
 
 > In Redux you keep all your state in one global store or one global state. In contrast, MobX uses multiple stores. Similar to Redux reducers, you can apply a divide and conquer by technical layers, domain etc. You might want to store your domain entities in separate stores yet also have control over the view state in on of your stores. After all, you collocate state that makes the most sense in your application.
 
-4. Redux의 `state`는 read-only라고 한다면 MobX는 read and write 이다. 이 말은 immutable, mutable과 의미가 일맥 상통한다. getter, setter에 익숙하다면 MobX 라는 말이다.
+4. Redux의 `state`는 read-only라고 한다면 MobX는 read and write 이다. 이 말은 immutable, mutable과 의미가 일맥 상통한다. getter, setter에 익숙하다면 MobX가 이해하기 편할 것이라는 말이다.
 
 > You have seen how to update the state in both Redux and MobX. It is different. In Redux your state is read-only. You can alter the state only by using explicit actions. In contrast, in MobX the state enables read and write. You can mutate the state directly without using actions yet you can opt-in explicit actions by using the enforceActions configuration.
 
-### 그래서?
+### 하지만 나는 Redux를 선택하기로 했다. 
 
-Redux인가 MobX인가? 커뮤니티에서의 논쟁은 더이상 신경쓰지 않고 내 맥락에서만 생각해보자면 비교적 적은 러닝커브로 부트스트래핑하기에는 MobX를 하는 것도 괜찮은 것 같다. 내가 MobX를 눈여겨 본 것이 딱 그와 같은 이유였기 때문이다. 
+Redux인가 MobX인가? 커뮤니티에서의 논쟁은 더이상 신경쓰지 않고 내 맥락에서만 생각해보자면 비교적 적은 러닝커브로 부트스트래핑하기에는 MobX가 괜찮은 것 같다. 내가 MobX를 눈여겨 본 것이 딱 그와 같은 이유였기 때문이다. 
 
-하지만 MobX는 그만큼 자유분방한 것 같다. 그 말은 스케일이 좀 커지는 프로젝트가 된다면 MobX도 서로 이렇게 사용하자는 약속이 필요해진다는 것이다. 적어도 내 느낌에 Redux는 그런 구조를 가지고 있다. 
+하지만 MobX는 아직 자유분방하다. 그 말은 프로젝트의 스케일이 커지는 시점에는 어떤 형태로 사용하자는 약속이 필요해진다는 것이다. 그리고 경험상 이것을 정의하기 위해서는 꽤 많은 에너지가 소비된다. 
 
-쓰면서 생각해보니 그냥 Redux를 써야겠다. 제목을 잘못 지었네? Redux vs MobX 보다는 Redux or MobX 라고 했어야 하나?
+적어도 Redux는 그 구조가 일부 적용되어 있다. 
 
