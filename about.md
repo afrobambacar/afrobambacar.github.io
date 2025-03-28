@@ -119,33 +119,33 @@ REST API의 분리로 서울스토어 모바일 앱 개발이 가능하게 되�
 
 ![Responsive Web](/assets/images/2025/2025-03-28-wonder-red.png)
 
-**프로젝트 개요**
+**개요**
 
-원더레드는 음원 수익을 유튜버와 공유하여 마케팅 효과를 음원 카탈로그 전시, 스트리밍 기능, 예상수익 차트, 수익 정산 기능이 필요했습니다. 새로운 아이템의 시장반응을 확인하기 위해 프로토타입 제작에 돌입했습니다.
+스타트업 설립 후 음원사들과 미팅을 통해 유튜브 음원 마케팅 니즈를 파악하였고 이를 해결할 아이디어가 떠올랐습니다. 아이디어 검증을 위해 MVP 제작이 필요했고 프로젝트명 원더레드로 개발을 시작했습니다.
 
-* 역할: 계약, 기획, 디자인, 개발
-* 참여인원: 1명
 * 진행기간: 2024. 01 - 2024. 08
+* 참여인원: 1명
 
 **주안점**
 
-* 반응형 웹 (Styled Components)
-* 인피닛스크롤 (IntersectionObserver API)
-* 드래그앤드랍 (React DnD)
-* 웹 플레이어 (React Player)
-* 예상 수익 차트 (Apexcharts)
+* 원더레드는 피봇 아이템으로 기존 개발해둔 인프라, API 그리고 프론트엔드를 활용
+* YouTube Data API, Reporting API에 대한 완벽한 이해 필요
+* 드래그앤드랍 라이브러리, 차트 라이브러리 선정 필요
+* 빠른 실행을 위해서 UI Wireframing, 디자인은 생략하고 바로 코딩 돌입
 
-**사용기술**
+**역할**
 
-* Wireframing: `Figma`
-* Front-end: `Next.js` `Redux.js` `Immutable.js` `Styled Components` `Rebass.js` `Docker`
-* Back-end: `Express.js` `Mongoose.js` `Docker`
-* CI/CD: `Github` `Github Actions` (Test, Dockerizing, ECR, ECS Deployment)
-* Infra: AWS ECS Fargate & MongoDB Cloud
+* 기획, 디자인, 개발, 마케팅, 계약까지
+* 프론트엔드는 Next.js, Redux.js, Docker로 구성
+* 드래그앤드랍 React DnD 라이브러리 도입, 차트는 Apexchart.js 도입
+* 백엔드는 Express.js, Monoose.js, Docker로 구성
+* AWS SES로 메일링 서비스 구축, SES Template 기능을 활용하여 뉴스레터, 홍보메일 발송
 
 **성과**
 
 * 유튜브 유통사 2곳과 파트너쉽 체결, 총 6만곡의 수익공유 음원 제공
+* 오픈 6개월만에 원더레드 제작 영상 총 조회수 1천만뷰 달성
+* 237개 유튜브 채널 등록하여 이용 중
 
 ### SKILLS
 
@@ -175,6 +175,7 @@ Express.js와 데이터베이스에 맞는 ORM을 사용하여 REST API 앱을 �
 애플리케이션의 테스트, 빌드 그리고 배포를 위한 자동화 툴로 다양한 서비스를 사용한 경험이 있습니다. 설치형인 Gitlab CI를 시작으로 CircleCI, TravisCI 그리고 Github Actions을 사용했습니다. Webpack이 나오기 전, 웹 애플리케이션의 빌드는 태스크 러너인 Grunt.js와 Gulp.js를 통해 해결했으며, 배포 시 캐싱 이슈를 고려하여 js 정적 파일들은 S3에 업로드, CloudFront에 캐싱되도록 하고 있습니다.
 
 **AWS**
+
 오토스케일링, CDN, 모니터링 등 웹 서비스에 필요한 다양한 인프라를 AWS의 적절한 서비스를 선택하여 모범사례에 따라 구현하고 있습니다. Lambda 함수는 Serverless 프레임워크를 통해 관리하고, 인프라 리소스는 Terraform을 사용하여 팀원과 공유 및 IaC 코드 재사용을 하고 있습니다.
 
 ### EDUCATION
@@ -182,4 +183,19 @@ Express.js와 데이터베이스에 맞는 ORM을 사용하여 REST API 앱을 �
 **명지대학교** - 학사 / _1998. 03 - 2005. 09_
 
 전기공학, 건축공학 복수 전공
+
+### CONTACT
+
+* Email: jclee.dev@gmail.com
+* LinkedIn: 
+
+
+
+
+
+
+
+
+
+
 
