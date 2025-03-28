@@ -331,15 +331,15 @@ em, i { font-style: italic; }
 }
 
 .post h1 {
-	margin-bottom: 20px;
+	margin-top: 10px;
 	color: #222;
-	font: 300 36px/1.4em "Helvetica Neue", Helvetica,Arial,sans-serif;
+	font: 600 36px/1.4em "Helvetica Neue", Helvetica,Arial,sans-serif;
 }
 
 .post h2 {
-	margin-bottom: 40px;
-	  font: 300 28px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
-	  color: #111;
+	margin-top: 10px;
+  font: 600 28px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #111;
 }
 
 
@@ -348,11 +348,11 @@ em, i { font-style: italic; }
 	font: normal 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
 	margin: -5px 0 40px 0;
 	color: #b2b9be;
-	  font-size: 13px;
-	  text-transform: uppercase;
-	  letter-spacing: 2px;
-	  /*margin-top: 15px;*/
-	  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /*margin-top: 15px;*/
+  display: inline-block;
 }
 
 #post-list h2 {
@@ -658,7 +658,6 @@ h2.month {
 	h1 { font-size: 26px; }
 	.post h2.headline { font-size: 13px; }
 	.post h1 { font-size:24px; }
-	.post h2 { font-size:20px; }
 }
 .ads {
 	margin: 15px 0;
