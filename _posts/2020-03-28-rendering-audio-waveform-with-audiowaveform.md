@@ -164,7 +164,7 @@ const graph = container.append('svg')
   .attr('stroke', 'black');
 ```
 
-아래는 리액트 함수의 일부입니다.
+아래는 제가 구현한 리액트 함수의 일부입니다.
 
 ```
 function renderWaveform(svgRef) {
@@ -218,7 +218,13 @@ function renderWaveform(svgRef) {
 }
 ```
 
-구현 결과
+샘플 테스트 결과
 
 ![Sampleer](/assets/images/2025/2025-03-28-6-55-48-PM.png)
+
+### 결론
+
+SVG로 렌더링이 되어 있으므로 이미지를 불러오는 것 보다 훨신 자유도 높은 인터렉션을 추가 할 수 있습니다. 클릭했을 때 재생되는 효과를 추가하거나, 재생된 부분 만큼 색을 변경 할 수도 있습니다. Player와 연동하여 Seeking 기능을 추가할 수도 있습니다. 
+
+막연하게 사이트에 Audio Waveform UI를 도입하고 싶어서 열심히 찾아본 기술인데 해외에서도 웹 음악 기술이 인기 항목은 아닌 것 같습니다. 그런데 찾으면 다 나온다는 사실, 못 찾으면 인스펙터를 통해서 어떻게 했는지 추적할 수 있다는 사실!
 
