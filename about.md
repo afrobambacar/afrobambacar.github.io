@@ -27,7 +27,6 @@ profile: true
 
 * 이커머스 서울스토어 8인 규모 개발팀 리드
 * IDC에서 AWS로 전체 서비스 이전
-* AuroraDB, ElasticSearch, MongoDB, Memcached 운영
 * 웹앱, API 앱, 모바일 앱 런칭
 
 **E2E HEALTH** - 팀원 - _1년 3개월 (2016. 04 - 2017. 06)_
@@ -49,15 +48,6 @@ profile: true
 * 소리바다 기획 PM
 * 소리바다 서비스 스토리보딩, 와이어프레이밍
 * Jira, Confluence 도입
-
-### FEATURED SKILLS
-
-개발하면서 몰두한 경험이 있는 몇 가지 기술들에 대해서 소개드립니다.
-
-* [BBC Audiowaveform 오픈 소스를 이용한 Wavefrom data 추출 및 D3.js로 렌더링하기](https://afrobambacar.github.io/2020/03/rendering-audio-waveform-with-audiowaveform.html)
-* 기본에 충실한 REST API, 단위, 통합 테스트, 문서화를 포함한 스캐폴딩
-* [React Native 프로젝트 배포 자동화 구현](https://afrobambacar.github.io/2019/01/react-native-ci-cd-with-travis-ci-and-fastlane.html)
-* [Serverless를 이용한 이미지 리사이징 람다 함수 구현](https://afrobambacar.github.io/2018/12/image-resizing-with-lambda-edge.html)
 
 ### FEATURED PROJECTS
 
@@ -157,6 +147,14 @@ REST API의 분리로 서울스토어 모바일 앱 개발이 가능하게 되�
 * 오픈 6개월만에 원더레드 제작 영상 총 조회수 1천만뷰 달성
 * 237개 유튜브 채널 등록하여 이용 중
 
+### FEATURED SKILLS
+
+개발하면서 몰두한 경험이 있는 몇 가지 기술들에 대해서 소개드립니다.
+
+* [BBC Audiowaveform 오픈 소스를 이용한 Wavefrom data 추출 및 D3.js로 렌더링하기](https://afrobambacar.github.io/2020/03/rendering-audio-waveform-with-audiowaveform.html)
+* [React Native 프로젝트 배포 자동화 구현](https://afrobambacar.github.io/2019/01/react-native-ci-cd-with-travis-ci-and-fastlane.html)
+* [Serverless를 이용한 이미지 리사이징 람다 함수 구현](https://afrobambacar.github.io/2018/12/image-resizing-with-lambda-edge.html)
+
 ### TECH STACK
 
 ![Tech Stack](/assets/images/2025/2025-03-28-1-22-32-PM.png)
@@ -191,9 +189,7 @@ Express.js와 데이터베이스에 맞는 ORM을 사용하여 REST API 앱을 �
 
 * Email: jclee.dev@gmail.com
 * Github: [https://github.com/afrobambacar](https://github.com/afrobambacar)
-
-
-
+* LinkedIn: [https://www.linkedin.com/in/jae-cheol-lee-4619a431/](https://www.linkedin.com/in/jae-cheol-lee-4619a431/)
 
 
 
