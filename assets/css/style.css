@@ -658,7 +658,7 @@ h2.month {
 	h1 { font-size: 26px; }
 	.post h2.headline { font-size: 13px; }
 	.post h1 { font-size:24px; }
-	p { font-size: 16px; }
+	p, ul { font-size: 16px; }
 }
 .ads {
 	margin: 15px 0;
