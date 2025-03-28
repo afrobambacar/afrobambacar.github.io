@@ -123,7 +123,102 @@ export const waveform = () => path =>
 }
 ```
 
-### 2부 D3.js를 이용한 렌더링
+### 2부 D3.js를 이용한 audio waveform 렌더링
 
+![Tracklib polygon](/assets/images/2025/2025-03-28-6-34-40-PM.png)
 
+집념을 가지고 웹 인스펙터를 열어보면 렌더링을 어떻게 하는지 힌트를 얻을 수 있습니다. 렌더링의 결과는 SVG 파일이며 ploygon이라는 사실이 눈에 띕니다. 하면서 알게 된 사실인데 json 파일을 호출해서 받은 데이터를 그대로 쓰기에는 앞서 언급했던 4번 Waveform의 형태를 커스터마이징 하기에 어려움이 있었습니다. json의 data를 적절하게 변경시켜줄 라이브러리를 찾던 중 waveform-data.js 모듈을 발견했고 D3.js로 렌더링하는 예제도 수록되어 있어서 모듈을 추가했습니다.
+
+```
+yarn add waveform-data
+```
+
+아래는 waveform-data.js에 수록된 예제 코드 입니다.
+
+```
+const waveform = WaveformData.create(raw_data);
+const channel = waveform.channel(0);
+const container = d3.select('#waveform-container');
+const x = d3.scaleLinear();
+const y = d3.scaleLinear();
+const offsetX = 100;
+
+const min = channel.min_array();
+const max = channel.max_array();
+
+x.domain([0, waveform.length]).rangeRound([0, 1000]);
+y.domain([d3.min(min), d3.max(max)]).rangeRound([offsetX, -offsetX]);
+
+const area = d3.svg.area()
+  .x((d, i) => x(i))
+  .y0((d, i) => y(min[i]))
+  .y1((d, i) => y(d));
+
+const graph = container.append('svg')
+  .style('width', '1000px')
+  .style('height', '200px')
+  .datum(max)
+  .append('path')
+  .attr('transform', () => `translate(0, ${offsetX})`)
+  .attr('d', area)
+  .attr('stroke', 'black');
+```
+
+아래는 리액트 함수의 일부입니다.
+
+```
+function renderWaveform(svgRef) {
+  const { d3 } = window
+
+  // CDN에 저장한 json 파일 불러오기
+  fetch(`https://cdn.example.com/${model.get('waveform')}`)
+    .then((response) => (response.status === 200 ? response.json() : null))
+    .then((json) => {
+      if (!json) return
+      // waveform-data.js를 이용하여 data를 적절하게 변환
+      const waveform = WaveformData.create(json)
+      const resampleWaveform = waveform.resample({ width: 512 })
+      const channel = resampleWaveform.channel(0)
+      const min = channel.min_array()
+      const max = channel.max_array()
+
+      /**
+       * d3.scaleLinear
+       * domain: 미니멈, 맥시멈 스케일을 지정합니다.
+       * rangeRound: 전달받은 값을 지정한 범위의 값으로 변환합니다.
+       * polygon의 좌표는 `x, y`값이 `0, 0`을 기준으로 잡기 때문에 양수로 모두 변환될 수 있도록 rangeRound를 지정
+       */
+      const layout = d3.select(svgRef.current)
+      const x = d3.scaleLinear().domain([0, resampleWaveform.length]).rangeRound([0, maxWidth])
+      const y = d3
+        .scaleLinear()
+        .domain([d3.min(min), d3.max(max)])
+        .rangeRound([0, maxHeight])
+
+      /**
+       * polygon에 전달할 points는 역순으로 만들어져야 하므로 `reverse()` 사용
+       * eg. [[0 ,1], [4, 10], [8, 100], [8, 100], [4, 10], [0, 1]]
+       */
+      const maxPoints = max.map((d, i) => [x(i), y(d)])
+      const minPoints = min.map((d, i) => [x(i), y(d)])
+      const points = maxPoints.concat(minPoints.reverse())
+
+      /**
+       * polygon svg render
+       * - base waveform
+       * - clip-path
+       */
+      layout.append('polygon').attr('points', points).attr('fill', '#3C4855')
+      layout
+        .append('polygon')
+        .attr('points', points)
+        .attr('fill', '#adb7bf')
+        .attr('clip-path', `url(#progress-clip-path-${model.get('_id')})`)
+    })
+}
+```
+
+구현 결과
+
+![Sampleer](/assets/images/2025/2025-03-28-6-55-48-PM.png)
 

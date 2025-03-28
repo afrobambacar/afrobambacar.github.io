@@ -52,6 +52,8 @@ profile: true
 
 ### FEATURED SKILLS
 
+개발하면서 몰두한 경험이 있는 몇 가지 기술들에 대해서 소개드립니다.
+
 * BBC Audiowaveform 오픈 소스를 이용한 Wavefrom data 추출 및 D3.js로 렌더링하기
 * 기본에 충실한 REST API, 단위, 통합 테스트, 문서화를 포함한 스캐폴딩
 * [React Native 프로젝트 배포 자동화 구현](https://afrobambacar.github.io/2019/01/react-native-ci-cd-with-travis-ci-and-fastlane.html)
