@@ -76,7 +76,7 @@ profile: true
 * AWS 인프라 구축: 오토스케일링, 무중단 배포에 필요한 모든 리소스 구축
 * 웹 앱 스캐폴딩 및 개발: Backbone.js & Express.js
 * API 앱 스캐폴딩 및 개발: Express.js & Sequelize.js
-* 레거시 서비스 마이그레이션: CDN, 관리자 등 레거시 서비스를 AWS로 마이그레이션
+* 레거시 서비스 마이그레이션: CDN, 관리자 등 레거시 서비스, 리소스를 AWS로 마이그레이션
 
 **성과**
 
