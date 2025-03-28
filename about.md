@@ -56,9 +56,11 @@ profile: true
 
 ![Responsive Web](/assets/images/2025/2025-03-28-wonder-red.png)
 
+
+
 **스파이크 트래픽에 취약했던 서울스토어의 AWS 이주 프로젝트** - _개발_
 
-**React Native & Webview를 이용한 iOS 모바일 앱 런칭** - _개발_
+**서울스토어 모바일 앱 출시를 위한 여정** - _개발_
 
 ### SKILLS
 
@@ -68,6 +70,27 @@ profile: true
 * [Serverless를 이용한 이미지 리사이징 람다 함수 구현](https://afrobambacar.github.io/2018/12/image-resizing-with-lambda-edge.html)
 
 ### TECH STACK
+
+![Tech Stack](/assets/images/2025-03-28-1-22-32-PM)
+
+**Javascript**
+
+프론트엔드부터 백엔드까지, OOP, Functional Programing, Typescript 까지, 애플리케이션 레벨에서 10년 이상 꾸준히 사용하고 있는 언어입니다. 최근에는 Next.js / React-Query / Zustand / Tailwind CSS 조합으로 프론트엔드를 만들고 있습니다.
+
+**SPA**
+
+Backbone.js에서 React.js까지, Single Page Web Application을 오랫동안 다뤄온 만큼 SPA에서 주로 발생하는 문제들을 해결한 경험이 있습니다. 또한 Javascript 생태계의 확장에 따라 함께 등장한 React Native, Electron까지 다양한 프레임워크를 사용한 경험이 있습니다.
+
+**REST API**
+
+Express.js와 데이터베이스에 맞는 ORM을 사용하여 REST API 앱을 만들어왔습니다. Jest와 Mocking 라이브러리를 이용한 테스트 코드를 작성하여 결과를 확인하는 습관이 있습니다. 
+
+**CI/CD**
+
+애플리케이션의 테스트, 빌드 그리고 배포를 위한 자동화 툴로 다양한 서비스를 사용한 경험이 있습니다. 설치형인 Gitlab CI를 시작으로 CircleCI, TravisCI 그리고 Github Actions을 사용했습니다. Webpack이 나오기 전, 웹 애플리케이션의 빌드는 태스크 러너인 Grunt.js와 Gulp.js를 통해 해결했으며, 배포 시 캐싱 이슈를 고려하여 js 정적 파일들은 S3에 업로드, CloudFront에 캐싱되도록 하고 있습니다.
+
+**AWS**
+오토스케일링, CDN, 모니터링 등 웹 서비스에 필요한 다양한 인프라를 AWS의 적절한 서비스를 선택하여 모범사례에 따라 구현하고 있습니다. Lambda 함수는 Serverless 프레임워크를 통해 관리하고, 인프라 리소스는 Terraform을 사용하여 팀원과 공유 및 IaC 코드 재사용을 하고 있습니다.
 
 ### EDUCATION
 
