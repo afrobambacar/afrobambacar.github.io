@@ -50,6 +50,13 @@ profile: true
 * 소리바다 서비스 스토리보딩, 와이어프레이밍
 * Jira, Confluence 도입
 
+### FEATURED SKILLS
+
+* BBC Audiowaveform 오픈 소스를 이용한 Wavefrom data 추출 및 D3.js로 렌더링하기
+* 기본에 충실한 REST API, 단위, 통합 테스트, 문서화를 포함한 스캐폴딩
+* [React Native 프로젝트 배포 자동화 구현](https://afrobambacar.github.io/2019/01/react-native-ci-cd-with-travis-ci-and-fastlane.html)
+* [Serverless를 이용한 이미지 리사이징 람다 함수 구현](https://afrobambacar.github.io/2018/12/image-resizing-with-lambda-edge.html)
+
 ### FEATURED PROJECTS
 
 #### 스파이크 트래픽에 취약했던 서울스토어의 AWS 이주 프로젝트
@@ -146,13 +153,6 @@ REST API의 분리로 서울스토어 모바일 앱 개발이 가능하게 되�
 * 유튜브 유통사 2곳과 파트너쉽 체결, 총 6만곡의 수익공유 음원 제공
 * 오픈 6개월만에 원더레드 제작 영상 총 조회수 1천만뷰 달성
 * 237개 유튜브 채널 등록하여 이용 중
-
-### SKILLS
-
-* BBC Audiowaveform 오픈 소스를 이용한 Wavefrom data 추출 및 D3.js로 렌더링하기
-* 기본에 충실한 REST API, 단위, 통합 테스트, 문서화를 포함한 스캐폴딩
-* [React Native 프로젝트 배포 자동화 구현](https://afrobambacar.github.io/2019/01/react-native-ci-cd-with-travis-ci-and-fastlane.html)
-* [Serverless를 이용한 이미지 리사이징 람다 함수 구현](https://afrobambacar.github.io/2018/12/image-resizing-with-lambda-edge.html)
 
 ### TECH STACK
 
