@@ -43,7 +43,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .icon-facebook-rect:before { content: '\e803'; }
 
 /* Spacing */
-.post h1, h3, h4, h5, p, .post-body ul, #post-list li, pre {
+.post h1, h2, h3, h4, h5, p, .post-body ul, #post-list li, pre {
 margin-bottom: 20px;
 }
 
@@ -63,10 +63,111 @@ h1 {
 	color: #222;
 	font-weight: bold;
 }
-
+/*
 h2 {
 	font: italic 19px/1.3em Georgia,serif;
 	color: #bbb;
+}
+*/
+h2, h3, h4, h5 { color:#333; }
+
+h2 { font-size: 28px; font-weight: bold; }
+h3 { font-size: 24px; font-weight: bold; }
+h4 { font-size: 20px; font-weight: bold; }
+h5 { font-size: 18px; font-weight: bold; }
+
+h6 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #666;
+	margin-bottom: 6px;
+}
+
+p.small {
+	color: #bbb;
+	font-size: 14px;
+	line-height: 1.5;
+	display: block;
+}
+
+blockquote {
+	padding-left: 15px;
+	border-left: 3px solid #eee;
+}
+
+hr {
+	display: block;
+	border: none;
+	height: 1px;
+	margin: 40px auto;
+	background: #eee;
+}
+
+span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
+
+pre	{
+	font-family:Menlo, Monaco, Courier;
+	white-space:pre-wrap;
+	/*border: 1px solid #ddd;*/
+	padding:20px;
+	background-color:#fdfdfd;
+	/*font-size:14px;*/
+	overflow:auto;
+	border-radius: 3px;
+	background: #272b2d;
+	  font-family: 'Source Code Pro',Menlo,monospace;
+	  font-size: 16px;
+	  line-height: 1.5em;
+	  font-weight: 500;
+	color: #d0d4d7;
+
+}
+
+table {
+	width: 100%;
+	margin: 40px 0;
+	border-collapse: collapse;
+	font-size: 13px;
+	line-height: 1.5em;
+}
+
+th,td {
+	text-align: left;
+	padding-right: 20px;
+	vertical-align: top;
+}
+
+table td,td {
+	border-spacing: none;
+	border-style: solid;
+	padding: 10px 15px;
+	border-width: 1px 0 0 0;
+}
+
+tr>td {
+	border-top: 1px solid #eaeaea;
+}
+
+tr:nth-child(odd)>td {
+	background: #fcfcfc;
+}
+
+thead th,th {
+	text-align: left;
+	padding: 10px 15px;
+	height: 20px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #444;
+	border-bottom: 1px solid #dadadc;
+	cursor: default;
+	white-space: nowrap;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	border-radius: 3px;
 }
 
 .profile #wrapper {
@@ -259,106 +360,6 @@ em, i { font-style: italic; }
 	color: #aaa;
 	max-width: 400px;
 	margin-top: 2px;
-}
-
-h3, h4, h5 { color:#333; }
-
-h3 { font-size:24px; font-weight: 400; }
-h4 { font-size:20px; font-weight:bold; }
-h5 { font-size:18px; font-weight: bold; }
-
-h6 {
-	font-size: 16px;
-	font-weight: bold;
-	color: #666;
-	margin-bottom: 6px;
-}
-
-p.small {
-	color: #bbb;
-	font-size: 14px;
-	line-height: 1.5;
-	display: block;
-}
-
-blockquote {
-	padding-left: 15px;
-	border-left: 3px solid #eee;
-}
-
-hr {
-	display: block;
-	border: none;
-	height: 1px;
-	margin: 40px auto;
-	background: #eee;
-}
-
-span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
-
-pre	{
-	font-family:Menlo, Monaco, Courier;
-	white-space:pre-wrap;
-	/*border: 1px solid #ddd;*/
-	padding:20px;
-	background-color:#fdfdfd;
-	/*font-size:14px;*/
-	overflow:auto;
-	border-radius: 3px;
-	background: #272b2d;
-	  font-family: 'Source Code Pro',Menlo,monospace;
-	  font-size: 16px;
-	  line-height: 1.5em;
-	  font-weight: 500;
-	color: #d0d4d7;
-
-}
-
-table {
-	width: 100%;
-	margin: 40px 0;
-	border-collapse: collapse;
-	font-size: 13px;
-	line-height: 1.5em;
-}
-
-th,td {
-	text-align: left;
-	padding-right: 20px;
-	vertical-align: top;
-}
-
-table td,td {
-	border-spacing: none;
-	border-style: solid;
-	padding: 10px 15px;
-	border-width: 1px 0 0 0;
-}
-
-tr>td {
-	border-top: 1px solid #eaeaea;
-}
-
-tr:nth-child(odd)>td {
-	background: #fcfcfc;
-}
-
-thead th,th {
-	text-align: left;
-	padding: 10px 15px;
-	height: 20px;
-	font-size: 13px;
-	font-weight: bold;
-	color: #444;
-	border-bottom: 1px solid #dadadc;
-	cursor: default;
-	white-space: nowrap;
-}
-
-img {
-	width: 100%;
-	max-width: 100%;
-	border-radius: 3px;
 }
 
 /* Made with Cactus Badge */
