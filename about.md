@@ -74,11 +74,11 @@ profile: true
 
 **사용기술**
 
-* 와이어프레임: Figma
-* 웹 개발: Next.js / Redux.js / Immutable.js / Styled Components / Rebass.js / Docker
-* API 개발: Express.js / Mongoose.js / Docker
-* CI/CD: Github / Github Actions (Test, Dockerizing, ECR, ECS Deployment)
-* 인프라: AWS ECS Fargate & MongoDB Cloud
+* Wireframing: `Figma`
+* Front-end: `Next.js` `Redux.js` `Immutable.js` `Styled Components` `Rebass.js` `Docker`
+* Back-end: `Express.js` `Mongoose.js` `Docker`
+* CI/CD: `Github` `Github Actions` (Test, Dockerizing, ECR, ECS Deployment)
+* Infra: AWS ECS Fargate & MongoDB Cloud
 
 **성과**
 
