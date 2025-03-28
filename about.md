@@ -113,6 +113,7 @@ REST API의 분리로 서울스토어 모바일 앱 개발이 가능하게 되�
 * Webview에서 전달하는 Customized User Agent에 따라 웹 앱이 다르게 동작하도록 로직 추가
 * 서버로부터 AccessToken을 받는 회원가입, 로그인 등 계정 부분은 React Native에서 개발
 * Universal Link를 적용하여 Push Notification 터치 시 의도한 웹뷰에 랜딩하도록 개발
+* CI/CD에 Fastlane을 이용하여 Testflight에 배포
 * MongoDB와 REST API를 추가하여 모바일에서 전달하는 FCM 토큰을 관리하도록 개발
 * MongoDB의 REST API는 ECS Fargate로 운영
 
@@ -187,7 +188,8 @@ Express.js와 데이터베이스에 맞는 ORM을 사용하여 REST API 앱을 �
 ### CONTACT
 
 * Email: jclee.dev@gmail.com
-* LinkedIn: 
+* Github: [https://github.com/afrobambacar](https://github.com/afrobambacar)
+
 
 
 
