@@ -15,38 +15,63 @@ profile: true
 * 모범사례에 따른 AWS 인프라 구축 경험 다수
 * 개발팀 리드 경험, 스타트업 설립 경험
 
-#### EXPERIENCE
+### EXPERIENCE
 
 **샘플리어** - 대표 / _5년 5개월 (2019. 11 - 재직중)_
 
-* 음악 저작권 분야 스타트업
-* 유튜브 음원 마케팅 서비스, 원더레드 운영
-* 2차적저작물 이용허락 서비스, 샘플리어 운영
+* 음악 저작권 분야 스타트업 설립 운영
+* 유튜브 음원 마케팅 서비스, 원더레드 런칭
+* 2차적저작물 이용허락 서비스, 샘플리어 런칭
 
 **디유닛** - 개발 팀장 / _2년 5개월 (2017. 07 - 2019. 11)_
 
-* 이커머스 서울스토어 운영사
+* 이커머스 서울스토어 8인 규모 개발팀 리드
 * IDC에서 AWS로 전체 서비스 이전
 * MSA 아키텍쳐, Serverless 도입
 * 웹앱, API 앱, 모바일 앱 런칭
 
 **E2E HEALTH** - 팀원 / _1년 3개월 (2016. 04 - 2017. 06)_
 
-* 헬스케어 스타트업
+* 미국향 원격진료 헬스케어 스타트업 1호 팀원
 * 보스톤 지역 원격진료 웹서비스 기획/개발
 * 삼성병원 원격진료 웹서비스 기획/개발
 
 **소리바다** - 개발 팀장 / _1년 4개월 (2014. 06 - 2015. 09)_
 
-* 글로벌 소리바다 웹서비스 개발
-* 소리바다 공통 SPA 웹 프레임워크 S 개발
-* Jira, Confluence, Gitlab, Gitlab-CI 도입
+* 9인 규모의 웹 개발팀 리드
+* Backbone.js 기반의 소리바다 공통 SPA 웹 프레임워크 S 개발
+* 소리바다 19개 호스트 관리 및 개발
+* Gitlab, Gitlab-CI 도입하여 CI/CD 구현
 
 **소리바다** - 기획 팀장 / _6년 6개월 (2007. 12 - 2014. 05)_
 
-* 소리바다 프로젝트 매니지먼트
-* 소리바다 웹서비스 기획
-* 소리바다 게임즈 뮤직톡톡 기획/개발
+* 4인 규모의 기획팀 리드
+* 소리바다 기획 PM
+* 소리바다 서비스 스토리보딩, 와이어프레이밍
+* Jira, Confluence 도입
 
-#### FEATURED PROJECTS
+### FEATURED PROJECTS
+
+**새로운 시장을 탐험하는 원더레드 프로젝트** - _기획 / 디자인 / 개발_
+
+![Responsive Web](/assets/images/2025/2025-03-28-wonder-red.png)
+
+**스파이크 트래픽에 취약했던 서울스토어의 AWS 이주 프로젝트** - _개발_
+
+**React Native & Webview를 이용한 iOS 모바일 앱 런칭** - _개발_
+
+### SKILLS
+
+* BBC Audiowaveform 오픈 소스를 이용한 Wavefrom data 추출 및 D3.js로 렌더링하기
+* 기본에 충실한 REST API, 단위, 통합 테스트, 문서화를 포함한 스캐폴딩
+* [React Native 프로젝트 배포 자동화 구현](https://afrobambacar.github.io/2019/01/react-native-ci-cd-with-travis-ci-and-fastlane.html)
+* [Serverless를 이용한 이미지 리사이징 람다 함수 구현](https://afrobambacar.github.io/2018/12/image-resizing-with-lambda-edge.html)
+
+### TECH STACK
+
+### EDUCATION
+
+**명지대학교** - 학사 / _1998. 03 - 2005. 09_
+
+전기공학, 건축공학 복수 전공
 
