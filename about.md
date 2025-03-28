@@ -86,7 +86,7 @@ profile: true
 
 #### 스파이크 트래픽에 취약했던 서울스토어의 AWS 이주 프로젝트
 
-![SEOULSTORE SPA WEB](/assets/images/2025-03-28-seoulstore-web.jpg)
+![SEOULSTORE SPA WEB](/assets/images/2025/2025-03-28-seoulstore-web.jpg)
 
 **프로젝트 개요**
 
@@ -99,7 +99,7 @@ profile: true
 
 **서울스토어 모바일 앱 출시를 위한 여정** - _개발_
 
-![SEOULSTORE REACT NATIVE iOS APP](/assets/images/2025-03-28-seoulstore-ios.jpg)
+![SEOULSTORE REACT NATIVE iOS APP](/assets/images/2025/2025-03-28-seoulstore-ios.jpg)
 
 **프로젝트 개요**
 
@@ -126,7 +126,7 @@ profile: true
 
 ### TECH STACK
 
-![Tech Stack](/assets/images/2025-03-28-1-22-32-PM)
+![Tech Stack](/assets/images/2025/2025-03-28-1-22-32-PM.png)
 
 **Javascript**
 
