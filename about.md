@@ -52,15 +52,70 @@ profile: true
 
 ### FEATURED PROJECTS
 
-**새로운 시장을 탐험하는 원더레드 프로젝트** - _기획 / 디자인 / 개발_
+#### 새로운 시장을 탐험하는 원더레드 프로젝트
 
 ![Responsive Web](/assets/images/2025/2025-03-28-wonder-red.png)
 
+**프로젝트 개요**
 
+원더레드는 음원 수익을 유튜버와 공유하여 마케팅 효과를 음원 카탈로그 전시, 스트리밍 기능, 예상수익 차트, 수익 정산 기능이 필요했습니다. 새로운 아이템의 시장반응을 확인하기 위해 프로토타입 제작에 돌입했습니다.
 
-**스파이크 트래픽에 취약했던 서울스토어의 AWS 이주 프로젝트** - _개발_
+* 역할: 계약, 기획, 디자인, 개발
+* 참여인원: 1명
+* 진행기간: 2024. 01 - 2024. 08
+
+**주안점**
+
+* 반응형 웹 (Styled Components)
+* 인피닛스크롤 (IntersectionObserver API)
+* 드래그앤드랍 (React DnD)
+* 웹 플레이어 (React Player)
+* 예상 수익 차트 (Apexcharts)
+
+**사용기술**
+
+* 와이어프레임: Figma
+* 웹 개발: Next.js / Redux.js / Immutable.js / Styled Components / Rebass.js / Docker
+* API 개발: Express.js / Mongoose.js / Docker
+* CI/CD: Github / Github Actions (Test, Dockerizing, ECR, ECS Deployment)
+* 인프라: AWS ECS Fargate & MongoDB Cloud
+
+**성과**
+
+* 유튜브 유통사 2곳과 파트너쉽 체결, 총 6만곡의 수익공유 음원 제공
+
+#### 스파이크 트래픽에 취약했던 서울스토어의 AWS 이주 프로젝트
+
+![SEOULSTORE SPA WEB](/assets/images/2025-03-28-seoulstore-web.jpg)
+
+**프로젝트 개요**
+
+온라인 쇼핑몰 서울스토어는 마케팅 메시지를 발송할 때마다 스파이크 트래픽을 견디지 못하고 서버가 다운되는 일을 겪고 있었습니다. 문제의 해결을 위해 입사 후 첫번째 프로젝트로 AWS로 이주를 결정했으며, PHP로 개발된 모놀리식 서비스를 다시 개발하기로 했습니다. 
+
+* 역할: 개발 리드 / AWS 인프라 구축 / 웹, API 앱 스캐폴딩 및 개발
+* 참여인원: 팀장 1명 / 웹 개발 1명 / API 개발 2명
+* 진행기간: 2017. 07 - 2018. 03
+
 
 **서울스토어 모바일 앱 출시를 위한 여정** - _개발_
+
+![SEOULSTORE REACT NATIVE iOS APP](/assets/images/2025-03-28-seoulstore-ios.jpg)
+
+**프로젝트 개요**
+
+온라인 쇼핑몰 서울스토어는 마케팅 메시지를 발송할 때마다 스파이크 트래픽을 견디지 못하고 서버가 다운되는 일을 겪고 있었습니다. 문제의 해결을 위해 입사 후 첫번째 프로젝트로 AWS로 이주를 결정했으며, PHP로 개발된 모놀리식 서비스를 다시 개발하기로 했습니다. 
+
+* 역할: 개발 리드 / iOS 앱 개발 / 웹 개발
+* 참여인원: 팀장 1명 / 웹 개발 2명 / API 개발 4명 / 안드로이드 1명
+* 진행기간: 2017. 07 - 2018. 03
+
+**주안점**
+
+* 
+
+**성과**
+
+* iOS 앱 런칭
 
 ### SKILLS
 
