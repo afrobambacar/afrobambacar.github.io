@@ -110,31 +110,47 @@ _인프라_
 
 **개요**
 
-스타트업 설립 후 음원사들과 미팅을 통해 유튜브 음원 마케팅 니즈를 파악하였고 이를 해결할 아이디어가 떠올랐습니다. 아이디어 검증을 위해 MVP 제작이 필요했고 프로젝트명 원더레드로 개발을 시작했습니다.
+음원사들과 미팅을 통해 유튜브 음원 마케팅 니즈를 파악했고 아이디어 검증을 위해 MVP 제작에 착수함
 
 * 진행기간: 2024. 01 - 2024. 08
 * 참여인원: 1명
 
-**주안점**
+**주요 사항**
 
-* 원더레드는 피봇 아이템으로 기존 개발해둔 인프라, API 그리고 프론트엔드를 활용
-* YouTube Data API, Reporting API에 대한 완벽한 이해 필요
-* 드래그앤드랍 라이브러리, 차트 라이브러리 선정 필요
-* 빠른 실행을 위해서 UI Wireframing, 디자인은 생략하고 바로 코딩 돌입
+* 기존 인프라, API, 프론트엔드 코드를 재사용하여 개발 기간 단축
+* 사이트 운영 요소를 백엔드에서 자동화하여 운영 효율성 극대화
+* AWS SES와 SES Template 기능을 활용해 비용 효율적인 메일링 시스템 구축 (뉴스레터, 홍보 메일 발송)
 
 **역할**
 
-* 기획, 디자인, 개발, 마케팅, 계약까지
-* 프론트엔드는 Next.js, Redux.js, Docker로 구성
-* 드래그앤드랍 React DnD 라이브러리 도입, 차트는 Apexchart.js 도입
-* 백엔드는 Express.js, Monoose.js, Docker로 구성
-* AWS SES로 메일링 서비스 구축, SES Template 기능을 활용하여 뉴스레터, 홍보메일 발송
+_프론트엔드_
+
+* Google OpenID Connect 및 OAuth 2.0 연동
+* 드래그 앤 드롭, 정렬(Sorting) 기능 개발
+* 라인 차트 및 바 차트 구현
+
+사용 기술: Next.js, Redux.js, Immutable.js, Rebass.js, Emotion, React-dnd, Apexchart.js, Docker
+
+_백엔드_
+
+* YouTube Data API 및 Reporting API 연동
+* DDEX 포맷의 메타데이터를 음원 DB에 삽입하는 배치 프로세스 개발
+* AWS Lambda와 EventBridge를 활용한 서버리스 크론 작업 개발
+* AWS JS SDK v2 → v3 마이그레이션 진행
+
+사용 기술: Express.js, Mongoose.js, Jest.js, DDEX, YouTube Data API, Docker
+
+_인프라_
+
+* AWS 인프라 관리를 Terraform으로 전환하여 인프라 관리 효율성 증대
+
+사용 기술: Terraform, AWS CLI, Serverless
 
 **성과**
 
-* 유튜브 유통사 2곳과 파트너쉽 체결, 총 6만곡의 수익공유 음원 제공
-* 오픈 6개월만에 원더레드 제작 영상 총 조회수 1천만뷰 달성
-* 237개 유튜브 채널 등록하여 이용 중
+* 유튜브 유통사 2곳과 파트너십 체결, 총 6만 곡의 수익 공유 음원 제공
+* 서비스 오픈 6개월 만에 원더레드 제작 영상 총 조회수 1,000만 뷰 달성
+* 237개 유튜브 채널 등록 및 서비스 이용 중
 
 #### 스파이크 트래픽에 취약했던 서울스토어의 AWS 이주 프로젝트
 
@@ -142,63 +158,134 @@ _인프라_
 
 **개요**
 
-온라인 쇼핑몰 서울스토어는 마케팅 메시지를 발송할 때마다 스파이크 트래픽을 견디지 못하고 서버가 다운되는 일을 겪고 있었습니다. 문제 해결을 위해 입사 후 첫번째 프로젝트로 AWS로 이주를 결정했으며, PHP로 개발된 모놀리식 서비스를 멀티 티어로 다시 개발하기로 했습니다. 
+온라인 쇼핑몰 서울스토어는 마케팅 메시지를 발송할 때마다 스파이크 트래픽을 견디지 못하고 서버가 다운되는 문제를 겪고 있었습니다. 이를 해결하기 위해 입사 후 첫 번째 프로젝트로 AWS로의 인프라 이전을 결정했으며, PHP로 개발된 모놀리식 서비스를 멀티 티어 구조로 재개발하기로 했습니다.
 
-* 진행기간: 2017. 07 - 2018. 03
-* 참여인원: 총 4명 - _팀장 1명 / 웹 개발 1명 / API 개발 2명_
+_팀이 직면한 문제_
 
-**주안점**
+* 마케팅 메시지 발송 시 스파이크 트래픽으로 인해 서버가 다운되는 문제
+* 접속량을 예측할 수 없어 IDC 서버 증설이 어려움
+* PHP 기반의 모놀리식 아키텍처로 인해 모바일 앱 개발이 지연됨
+* 비즈니스 성장에 따라 신규 기능 요청이 증가했지만, 기존 시스템 구조상 대응이 어려운 상황
+* 팀원들은 신기술 도입에 대한 니즈가 높았으나, 기존 환경에서는 도입이 어려움
 
-* 손 쉽게 스케일 아웃이 가능하도록 AWS 인프라 구성
-* 통합 검색 기능, 트래픽 분산의 목적으로 Aurora DB 외 ElasticSearch 추가
-* 향후 모바일 앱 런칭을 위해서 웹, API를 분리하여 별도의 앱으로 개발
-* SPA, REST API, Docker, CI/CD 셋을 선 개발하여 팀원들을 리드
+각 문제들이 상호 의존성이 있었기 때문에, 데이터 레이어를 제외하고 새로운 프로덕트를 개발하는 것이 최선이라고 판단했습니다. 이를 경영진에게 설득한 후, 프론트엔드 1명, 백엔드 2명과 함께 AWS 마이그레이션 프로젝트를 시작했습니다.
+
+* 진행기간: 2017.08 - 2018.02
+* 참여인원: 4명 (팀장 1명 / 웹 개발 1명 / API 개발 2명)
+
+**해결 방안**
+
+_서버 다운 문제 해결_
+
+* IDC 인프라 → AWS 이전 및 오토스케일링 적용
+* 스파이크 트래픽 예측 시, 미리 서버 증설 및 ELB 프리워밍 요청
+* ElasticSearch 도입으로 통합검색, 키워드 자동완성, 랭킹 기능 구현 → DB 부하 분산
+
+_모바일 앱 개발 대응_
+
+* 반응형 웹 앱과 RESTful API 앱으로 분리하여 향후 확장성 확보
+* 프론트엔드: Backbone.js + Express.js 선택
+* 백엔드: Express.js + Sequelize, Express.js + Elasticsearch 선택
+
+_레거시 마이그레이션_
+
+* 운영 중인 PHP 관리자 페이지는 Dockerizing하여 AWS로 이전
+* AWS Database Migration Service를 활용해 MySQL → Aurora DB로 마이그레이션
+* Memcached를 AWS에 추가 배포하여 기존 PHP 로그인 세션 유지
+* CloudFront 도입 후, 이미지 리사이징 Lambda 함수 개발 및 정적 파일 마이그레이션
 
 **역할**
 
-* 개발 리드: 다양한 기술 제안 및 스캐폴딩 제공
-* AWS 인프라 구축: 오토스케일링, 무중단 배포에 필요한 모든 리소스 구축
-* 웹 앱 스캐폴딩 및 개발: Backbone.js & Express.js
-* API 앱 스캐폴딩 및 개발: Express.js & Sequelize.js
-* 레거시 서비스 마이그레이션: CDN, 관리자 등 레거시 서비스, 리소스를 AWS로 마이그레이션
+_프론트엔드 개발_
+
+* Backbone.js / Express.js / Docker 기반의 프론트엔드 스캐폴딩 개발 및 팀원 제공
+* Bootstrap CSS 컴포넌트 사례를 기획/디자인팀과 협업하여 디자인 시스템 구축
+* Bootstrap 저장소 Fork → 디자인 반영 및 결과물 공유 환경 구성
+* 인프라 구축 후 프론트엔드 개발 참여
+
+_백엔드 개발_
+
+* Express.js / Sequelize / Elasticsearch / Docker 기반의 백엔드 스캐폴딩 개발 및 제공
+
+_인프라 구성_
+
+* AWS VPC 및 필수 요소 마이그레이션 및 ECS 오토스케일링 환경 구성
+* AWS Database Migration Service 활용 → MySQL → Aurora DB 마이그레이션
+* GitHub 브랜치별 환경 구분 (dev → local, staging → staging, master → production)
+* CI/CD 구축: GitHub - Travis CI - AWS CodeDeploy 연동
+
+_레거시 마이그레이션_
+
+* CloudFront 설정 후 이미지 리사이징 Lambda 함수 개발 및 정적 파일 마이그레이션
+* 기존 PHP 관리자 페이지를 Dockerizing하여 AWS로 이전
+* Aurora DB 연동 및 Memcached 배포하여 기존 로그인 세션 유지
 
 **성과**
 
-* 반응형 웹으로 리뉴얼하여 데스크탑 & 모바일 동시 대응
-* REST API 레이어의 분리로 모바일 앱 개발에 박차
-* 스파이크 트래픽 형태의 동시접속 10,000유저 대응
+* 반응형 웹 리뉴얼 완료 → 데스크톱 & 모바일 동시 대응 가능
+* REST API 레이어 분리 → 모바일 앱 개발 본격화
+* 스파이크 트래픽 대응 → 동시 접속 10,000명까지 원활한 서비스 운영
 
-#### 서울스토어 모바일 앱 출시를 위한 여정
+#### React Native로 만든 하이브리드 iOS 모바일 앱 출시
 
 ![SEOULSTORE REACT NATIVE iOS APP](/assets/images/2025/2025-03-28-seoulstore-ios.jpg)
 
 **개요**
 
-REST API의 분리로 서울스토어 모바일 앱 개발이 가능하게 되었습니다. 안드로이드는 담당 개발자가 진행중이었으나, iOS는 개발자의 부재로 React Native와 Webview를 사용하여 하이브리드 앱을 만들기로 하였습니다. 여기에 더해 팀에는 모바일 앱 런칭 일정에 맞춰 사용자의 리텐션을 높일 수 있는 참여형 서비스의 개발 미션도 주어졌습니다.
+서울스토어의 REST API 분리를 통해 모바일 앱(iOS/Android) 개발이 가능해졌습니다. 안드로이드 앱은 선행 개발 중이었으나, iOS 개발자는 부재한 상황이었습니다. 이에 따라 React Native와 WebView를 활용한 하이브리드 앱 개발을 결정했습니다.
 
-* 진행기간: 2018. 05 - 2018. 07
-* 참여인원: 총 8명 - _팀장 1명 / 웹 개발 2명 / API 개발 4명 / 안드로이드 1명_
+* 진행기간: 2018.05 - 2018.06
+* 참여인원: 2명 (팀장 1명 / 웹 개발 1명)
 
-**주안점**
+**문제점**
 
-* React Native로 원하는 앱을 만들 수 있는지 파일럿 테스트 진행
-* 일정상 사용자 참여형 서비스는 웹 앱에 개발하고, iOS 앱은 웹 앱을 최대한 활용
-* FCM 토큰 관리, 사용자 참여형 서비스는 MongoDB를 쓰고 이커머스 DB와 분리하여 부하 분산
+* 경영진의 iOS 및 Android 동시 출시 요청 → 하지만 안드로이드 앱만 개발 중
+* 푸시 알림(FCM) 구현 필요 → 그러나 백엔드 개발 인력이 부족한 상황
+* iOS 로그인 유지 문제 → 웹뷰 환경에서 로그인 세션이 유지되지 않는 문제 발생
+
+**해결 전략**
+
+React Native + WebView 파일럿 테스트를 먼저 진행하여 개발 가능성을 검증
+
+_WebView 로그인 유지 해결_
+
+* React Native에서 AccessToken을 저장하고 WebView에 전달하도록 구현
+* Web 앱에서 전달받은 AccessToken을 이용해 로그인 상태 처리
+
+_푸시 알림(FCM) 백엔드 개발_
+
+* 디바이스 ID와 FCM 토큰을 저장할 API 개발
+* MongoDB를 활용하여 이커머스 DB와 분리, 부하 분산
+
+_Universal Link 개발_
+
+* 푸시 알림 클릭 시 의도한 웹뷰 페이지로 이동하도록 구현
+* 일부 Objective-C 코드 적용하여 Universal Link 및 Third-Party Login 연동
 
 **역할**
 
-* Webview에서 전달하는 Customized User Agent에 따라 웹 앱이 다르게 동작하도록 로직 추가
-* 서버로부터 AccessToken을 받는 회원가입, 로그인 등 계정 부분은 React Native에서 개발
-* Universal Link를 적용하여 Push Notification 터치 시 의도한 웹뷰에 랜딩하도록 개발
-* CI/CD에 Fastlane을 이용하여 Testflight에 배포
-* MongoDB와 REST API를 추가하여 모바일에서 전달하는 FCM 토큰을 관리하도록 개발
-* MongoDB의 REST API는 ECS Fargate로 운영
+_모바일 앱 개발_
+
+* React Native 프로젝트 초기 설정 및 스캐폴딩 (React Native / Redux / React Native WebView)
+* React Native + WebView 기반 로그인/회원가입 기능 구현
+* FCM 푸시 토큰을 백엔드로 전달하는 기능 개발
+* Universal Link 적용 → 푸시 알림 클릭 시 지정된 웹뷰로 이동
+* Fastlane을 이용한 CI/CD 설정 → TestFlight 자동 배포 구축
+
+_백엔드 개발_
+
+* FCM 토큰 관리용 REST API 개발 (Express.js / Mongoose / Jest / Docker)
+* Push Notification 관련 DB Schema 설계 및 FCM 연동
+* MongoDB를 활용하여 이커머스 DB와 분리, 트래픽 부하 분산
+
+_인프라 구축_
+
+* MongoDB 기반 REST API를 AWS ECS Fargate 환경에서 운영
 
 **성과**
 
-* 앱스토어에 iOS 앱, Android 앱 배포로 DAU 증가
-* 사용자 참여형 서비스 "서울그램", 리워드 강화 프로그램 "친구할인코드" 런칭
-* Push Notification이 적용, 사용자 참여형 서비스 적용으로 유저 리텐션 증가
+* iOS 및 Android 앱 동시 출시 목표 달성
+* 모바일 앱 출시 + 푸시 알림 도입 → DAU 및 사용자 리텐션 증가
 
 ### FEATURED SKILLS
 
