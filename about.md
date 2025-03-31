@@ -74,7 +74,7 @@ _프론트엔드_
 * 상태 관리를 위해 Ducks와 Normalize 패턴을 사용하여 시간 복잡도 최적화
 * SVG 폴리곤을 이용한 오디오 웨이브폼 UI 개발
 * HLS 오디오 스트리밍 기술 개발
-* Next.js 빌드 후 생성된 번들 파일의 배포 시 캐싱 경로 분기 처리로 배포 후 클라이언트 오류 방지
+* Next.js 배포 시 번들 파일의 배포 경로 분기 및 캐싱으로 클라이언트 오류 방지
 
 사용 기술: Next.js, Redux.js, Immutable.js, Rebass.js, Emotion, D3.js, Docker
 
