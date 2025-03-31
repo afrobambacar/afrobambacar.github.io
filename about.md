@@ -198,14 +198,14 @@ _레거시 마이그레이션_
 
 _프론트엔드 개발_
 
-* Backbone.js / Express.js / Docker 기반의 프론트엔드 스캐폴딩 개발 및 팀원 제공
+* Backbone.js / Express.js / Docker 기반의 프론트엔드 스캐폴딩 개발 및 사용법 전파
 * Bootstrap CSS 컴포넌트 사례를 기획/디자인팀과 협업하여 디자인 시스템 구축
 * Bootstrap 저장소 Fork → 디자인 반영 및 결과물 공유 환경 구성
 * 인프라 구축 후 프론트엔드 개발 참여
 
 _백엔드 개발_
 
-* Express.js / Sequelize / Elasticsearch / Docker 기반의 백엔드 스캐폴딩 개발 및 제공
+* Express.js / Sequelize / Elasticsearch / Docker 기반의 백엔드 스캐폴딩 개발 및 사용법 전파
 
 _인프라 구성_
 
@@ -216,15 +216,15 @@ _인프라 구성_
 
 _레거시 마이그레이션_
 
-* CloudFront 설정 후 이미지 리사이징 Lambda 함수 개발 및 정적 파일 마이그레이션
+* CloudFront, Lambda, S3를 이용한 온디맨드 이미지 리사이징 구현 및 정적 파일 마이그레이션
 * 기존 PHP 관리자 페이지를 Dockerizing하여 AWS로 이전
-* Aurora DB 연동 및 Memcached 배포하여 기존 로그인 세션 유지
+* 관리자 로그인 기능 유지를 위해 Aurora DB 연동 및 Memcached 배포
 
 **성과**
 
 * 반응형 웹 리뉴얼 완료 → 데스크톱 & 모바일 동시 대응 가능
-* REST API 레이어 분리 → 모바일 앱 개발 본격화
-* 스파이크 트래픽 대응 → 동시 접속 10,000명까지 원활한 서비스 운영
+* RESTful API 레이어 분리 → 모바일 앱 개발 본격화
+* 스파이크 트래픽 대응 → 동시 접속 10,000명 안정적 처리
 
 #### React Native로 만든 하이브리드 iOS 모바일 앱 출시
 
@@ -232,7 +232,7 @@ _레거시 마이그레이션_
 
 **개요**
 
-서울스토어의 REST API 분리를 통해 모바일 앱(iOS/Android) 개발이 가능해졌습니다. 안드로이드 앱은 선행 개발 중이었으나, iOS 개발자는 부재한 상황이었습니다. 이에 따라 React Native와 WebView를 활용한 하이브리드 앱 개발을 결정했습니다.
+서울스토어의 RESTful API 분리를 통해 모바일 앱(iOS/Android) 개발이 가능해졌습니다. 안드로이드 앱은 선행 개발 중이었으나, iOS 개발자는 부재한 상황이었습니다. 이에 따라 React Native와 WebView를 활용한 하이브리드 앱 개발을 결정했습니다.
 
 * 진행기간: 2018.05 - 2018.06
 * 참여인원: 2명 (팀장 1명 / 웹 개발 1명)
@@ -240,7 +240,7 @@ _레거시 마이그레이션_
 **문제점**
 
 * 경영진의 iOS 및 Android 동시 출시 요청 → 하지만 안드로이드 앱만 개발 중
-* 푸시 알림(FCM) 구현 필요 → 그러나 백엔드 개발 인력이 부족한 상황
+*  알림(FCM) 구현 필요 → 그러나 백엔드 개발 인력이 부족한 상황
 * iOS 로그인 유지 문제 → 웹뷰 환경에서 로그인 세션이 유지되지 않는 문제 발생
 
 **해결 전략**
@@ -252,14 +252,14 @@ _WebView 로그인 유지 해결_
 * React Native에서 AccessToken을 저장하고 WebView에 전달하도록 구현
 * Web 앱에서 전달받은 AccessToken을 이용해 로그인 상태 처리
 
-_푸시 알림(FCM) 백엔드 개발_
+_ 알림(FCM) 백엔드 개발_
 
 * 디바이스 ID와 FCM 토큰을 저장할 API 개발
 * MongoDB를 활용하여 이커머스 DB와 분리, 부하 분산
 
 _Universal Link 개발_
 
-* 푸시 알림 클릭 시 의도한 웹뷰 페이지로 이동하도록 구현
+*  알림 클릭 시 의도한 웹뷰 페이지로 이동하도록 구현
 * 일부 Objective-C 코드 적용하여 Universal Link 및 Third-Party Login 연동
 
 **역할**
@@ -268,24 +268,24 @@ _모바일 앱 개발_
 
 * React Native 프로젝트 초기 설정 및 스캐폴딩 (React Native / Redux / React Native WebView)
 * React Native + WebView 기반 로그인/회원가입 기능 구현
-* FCM 푸시 토큰을 백엔드로 전달하는 기능 개발
-* Universal Link 적용 → 푸시 알림 클릭 시 지정된 웹뷰로 이동
+* FCM  토큰을 백엔드로 전달하는 기능 개발
+* Universal Link 적용 →  알림 클릭 시 지정된 웹뷰로 이동
 * Fastlane을 이용한 CI/CD 설정 → TestFlight 자동 배포 구축
 
 _백엔드 개발_
 
-* FCM 토큰 관리용 REST API 개발 (Express.js / Mongoose / Jest / Docker)
+* FCM 토큰 관리용 RESTful API 개발 (Express.js / Mongoose / Jest / Docker)
 * Push Notification 관련 DB Schema 설계 및 FCM 연동
 * MongoDB를 활용하여 이커머스 DB와 분리, 트래픽 부하 분산
 
 _인프라 구축_
 
-* MongoDB 기반 REST API를 AWS ECS Fargate 환경에서 운영
+* MongoDB 기반 RESTful API를 AWS ECS Fargate 환경에서 운영
 
 **성과**
 
 * iOS 및 Android 앱 동시 출시 목표 달성
-* 모바일 앱 출시 + 푸시 알림 도입 → DAU 및 사용자 리텐션 증가
+* 모바일 앱 출시 +  알림 도입 → DAU 및 사용자 리텐션 증가
 
 ### FEATURED SKILLS
 
