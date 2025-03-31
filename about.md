@@ -55,45 +55,52 @@ profile: true
 
 **개요**
 
-스타트업 설립 후 빠른 MVP 개발이 필요했지만 향후 있을 협업 가능성을 고려하여 새로운 기술 스택을 도입하기로 하였습니다. 
+스타트업 설립 후 MVP 개발을 위해 새로운 기술 스택을 도입함. 프론트엔드, 백엔드, 인프라 전반을 단독으로 개발
 
 * 진행기간: 진행기간: 2019. 11 - 2020. 04
 * 참여인원: 1명
 
-**주안점**
+**주요 사항**
 
-* Next.js, Redux.js 스캐폴딩을 통해 협업이 가능한 구조로 개발
-* 반응형 웹 개발로 PC, 모바일 브라우저에서 이용할 수 있도록 개발
-* 개발 기간 단축을 위해 기획, 디자인 단계는 생략하고 코딩으로 결과 도출
+* Next.js와 Redux.js 스캐폴딩을 사용하여 협업 가능한 구조 개발
+* PC와 모바일 브라우저에서 모두 사용할 수 있도록 반응형 웹 애플리케이션 구축
+* 개발 기간 단축을 위해 기획 및 디자인 단계를 생략하고, 코딩으로 결과를 도출
 
 **역할**
 
-[프론트엔드]
-* 프로젝트 스캐폴딩, API 연동, 페이지, 컴포넌트, 반응형 웹 개발
-* 상태관리에 ducks 패턴, normalize 패턴을 사용하여 시간 복잡도 최적화
-* SVG polygon으로 Audio Waveform UI 개발
-* HLS 프로토콜의 오디오 스트리밍 기술 개발
-* Next.js 빌드로 생성한 번들 파일 배포 시 캐싱 경로를 분기하여 배포 후 클라이언트 오류 방지
-* 사용기술: Next.js / Redux.js / Immutable.js / Rebass.js / Emotion / D3.js / Docker
+_프론트엔드_
 
-백엔드
-* 프로젝트 스캐폴딩, REST API 개발
-* OAuth 2.0 개발 및 인증 Middleware 개발
-* PortOne(Iamport) SDK 및 API를 사용하여 결제 개발
-* 회원, 결제, 음원 메타데이터 DB 스키마 작성
-* 오디오 파일로부터 waveform 데이터 추출 및 HLS 인코딩
-* TDD, Jest로 단위, 통합 테스트 개발
-* 사용기술: Express.js / Mongoose.js / Jest.js / Docker / MongoDB
+* 프로젝트 스캐폴딩, API 연동, 페이지 및 컴포넌트 개발, 반응형 웹 개발 주도
+* 상태 관리를 위해 Ducks와 Normalize 패턴을 사용하여 시간 복잡도 최적화
+* SVG 폴리곤을 이용한 오디오 웨이브폼 UI 개발
+* HLS 오디오 스트리밍 기술 개발
+* Next.js 빌드 후 생성된 번들 파일의 배포 시 캐싱 경로 분기 처리로 배포 후 클라이언트 오류 방지
 
-인프라
-* Github Actions CI/CD 구현
-* AWS VPC 및 ECR, ECS Fargate 환경 구성
-* CloudFront, Lambda, S3를 이용한 on-the-fly image resizing.
-* Serverless를 이용한 Lambda 함수 관리
-* AWS CLI를 이용한 SES 템플릿 배포, 슬랙을 통한 템플레이팅 오류 모니터링
-* 사용기술: aws-cli, serverless
+사용 기술: Next.js, Redux.js, Immutable.js, Rebass.js, Emotion, D3.js, Docker
+
+_백엔드_
+
+* 프로젝트 스캐폴딩 및 RESTful API 개발
+* OAuth 2.0 프레임워크 개발 및 인증 미들웨어 개발
+* PortOne (Iamport) SDK와 API를 사용한 결제 개발
+* 회원, 결제, 음원 메타데이터 DB 스키마 설계
+* 오디오 파일로부터 웨이브폼 데이터를 추출하고 HLS 인코딩 구현
+* Jest를 사용하여 단위 및 통합 테스트 개발
+
+사용 기술: Express.js, Mongoose.js, Jest.js, Docker, MongoDB
+
+_인프라_
+
+* GitHub Actions를 이용한 CI/CD 구현
+* AWS VPC, ECR, ECS Fargate 환경 구성
+* CloudFront, Lambda, S3를 이용한 온디맨드 이미지 리사이징 구현
+* Serverless 프레임워크를 이용한 Lambda 함수 관리
+* AWS CLI를 사용하여 SES 템플릿 배포 및 슬랙을 통한 템플릿 오류 모니터링
+
+사용 기술: AWS CLI, Serverless
 
 **성과**
+
 * 경기콘텐츠진흥원, 한양대 데모데이에서 우수상 2회 수상
 * 2.5억원 시드 투자 유치 성공
 
