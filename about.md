@@ -10,7 +10,7 @@ profile: true
 
 **주요 업무 분야**
 
-* 웹, 모바일, API 등 비즈니스에 필요한 프로덕트 개발
+* 웹, 모바일, API 등 비즈니스에 필요한 풀스택 프로덕트 개발
 * Git에서 출발하여 배포까지 자동으로, CI/CD 구축
 * 용도에 맞는 AWS 리소스 선택과 모범사례에 따른 인프라 구축
 * 개발팀 리드 경험, 스타트업 설립 경험
@@ -161,15 +161,15 @@ REST API의 분리로 서울스토어 모바일 앱 개발이 가능하게 되�
 
 **Javascript**
 
-프론트엔드부터 백엔드까지, OOP, Functional Programing, Typescript 까지, 애플리케이션 레벨에서 10년 이상 꾸준히 사용하고 있는 언어입니다. 최근에는 Next.js / React-Query / Zustand / Tailwind CSS 조합으로 프론트엔드를 만들고 있습니다.
+프론트엔드부터 백엔드까지, OOP, Functional Programing, NodeJS와 Typescript 까지, Javascript는 애플리케이션 레벨에서 10년 이상 꾸준히 사용하고 있는 언어입니다.
 
 **SPA**
 
-Backbone.js에서 React.js까지, Single Page Web Application을 오랫동안 다뤄온 만큼 SPA에서 주로 발생하는 문제들을 해결한 경험이 있습니다. 또한 Javascript 생태계의 확장에 따라 함께 등장한 React Native, Electron까지 다양한 프레임워크를 사용한 경험이 있습니다.
+Backbone.js에서 React.js까지, Single Page Web Application을 오랫동안 다뤄온 만큼 SPA에서 주로 발생하는 문제들을 해결한 경험이 있습니다. 또한 Javascript 생태계의 확장에 따라 함께 등장한 React Native, Electron까지 다양한 프레임워크를 사용한 경험이 있습니다. 최근에는 Next.js / React-Query / Zustand / Tailwind CSS 구성으로 프론트엔드 스캐폴딩을 하고 있습니다.
 
 **REST API**
 
-Express.js와 데이터베이스에 맞는 ORM을 사용하여 REST API 앱을 만들어왔습니다. Jest와 Mocking 라이브러리를 이용한 테스트 코드를 작성하여 결과를 확인하는 습관이 있습니다. 
+Express.js와 데이터베이스에 맞는 ORM을 사용하여 REST API 앱을 만들고 있습니다. Mongoose, Sequelize, Elasticsearch ORM을 사용한 경험이 있습니다. Jest와 Mocking 라이브러리를 이용한 테스트 코드를 작성하여 결과를 확인하는 습관이 있으며, 문서 작성은 Swagger를 사용합니다.
 
 **CI/CD**
 
@@ -177,7 +177,7 @@ Express.js와 데이터베이스에 맞는 ORM을 사용하여 REST API 앱을 �
 
 **AWS**
 
-오토스케일링, CDN, 모니터링 등 웹 서비스에 필요한 다양한 인프라를 AWS의 적절한 서비스를 선택하여 모범사례에 따라 구현하고 있습니다. Lambda 함수는 Serverless 프레임워크를 통해 관리하고, 인프라 리소스는 Terraform을 사용하여 팀원과 공유 및 IaC 코드 재사용을 하고 있습니다.
+오토스케일링, CDN, 모니터링 등 웹 서비스에 필요한 다양한 인프라를 AWS의 적절한 서비스를 선택하여 모범사례에 따라 구현하고 있습니다. Lambda 함수는 Serverless 프레임워크를 통해 관리하고, 인프라 리소스는 Terraform을 사용하여 팀원들과 공유 및 코드 재사용을 하고 있습니다.
 
 ### EDUCATION
 

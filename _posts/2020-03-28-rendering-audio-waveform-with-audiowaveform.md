@@ -220,7 +220,7 @@ function renderWaveform(svgRef) {
 
 샘플 테스트 결과
 
-![Sampleer](/assets/images/2025/2025-03-28-6-55-48-PM.png)
+![Sampleer](/assets/images/2025/2025-03-30-2-51-55-PM.png)
 
 ### 결론
 
